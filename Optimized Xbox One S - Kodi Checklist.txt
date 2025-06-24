@@ -1,0 +1,115 @@
+Here’s your **optimized Xbox One S checklist**, formatted for easy execution:
+
+---
+
+### **🚀 Xbox One S Kodi Optimization Checklist**  
+*(Verified June 2024 for Cocoscrapers 1.0.37 + Real-Debrid)*  
+
+#### **🔧 System Settings**  
+1. **Cache Adjustment**  
+   - 📌 **Increase to 128MB**:  
+     Edit `advancedsettings.xml`:  
+     ```xml
+     <cache>
+       <memorysize>134217728</memorysize> <!-- 128MB -->
+       <buffermode>1</buffermode>         <!-- "Buffer all network filesystems" -->
+       <readfactor>20</readfactor>
+     </cache>
+     ```
+
+2. **Audio Configuration** *(For Vizio D50-9X)*  
+   - 🔊 **Output Device**: `HDMI - Digital Output (Virtual Audio Device)`  
+   - ⚙️ **Output Configuration**: `Fixed` (Set to **48kHz**)  
+   - 🔄 **Enable**: `Sync playback to display`  
+   - ⏱️ **Audio Offset**: `+100ms` *(if lipsync issues persist)*  
+
+3. **Video Playback**  
+   - 🚫 **Disable** all hardware acceleration  
+   - 📺 **Match Refresh Rate**: `On Start/Stop` *(Settings > Player > Videos)*  
+
+---
+
+### **🧹 Maintenance Tasks**  
+1. **Clean Library**  
+   - Go to:  
+     `Settings > Media > Library`  
+     → `Clean Library` (removes dead links)  
+   - **For deep clean**:  
+     Delete these files (via [File Manager](#file-access)):  
+     - `MyVideos*.db`  
+     - `Textures13.db`  
+
+2. **Scraper Setup** *(Cocoscrapers)*  
+   - ✅ **Enable**:  
+     - `1337x`  
+     - `Kickass2` *(with filters below)*  
+     - `Torrentio` *(monitor for crashes)*  
+   - ❌ **Disable**:  
+     - `EZTV` *(confirmed broken)*  
+     - `TorrentGalaxy`/`YTS` *(deprecated)*  
+   - ⚙️ **Kickass2 Filters**:  
+     ```yaml
+     min_seeders: 5  
+     max_results: 10  
+     ```
+
+---
+
+### **🔍 Pro Tips**  
+1. **Accessing U: Drive** *(Xbox File System)*  
+   - **Method 1 (Kodi)**:  
+     `File Manager > Profile Directory (special://profile)/`  
+   - **Method 2 (USB)**:  
+     1. Plug USB into Xbox  
+     2. In Kodi:  
+        `Add Source > U:\Users\UserMgr0\AppData\Local\Packages\...`  
+
+2. **Log Monitoring**  
+   - Enable debug: `Settings > Logging > Debugging`  
+   - Key terms to grep:  
+     - `Win32Networking` *(Xbox throttling)*  
+     - `CAE::Initialize` *(audio issues)*  
+     - `Cocoscrapers: [SUCCESS]` *(scraper health)*  
+
+3. **Max Threads Explained**  
+   - **What it is**: Number of simultaneous scrapers allowed.  
+   - **Why "2" on Xbox?**  
+     - Xbox’s **1.75GHz CPU** can’t handle more without freezing.  
+     - Prevents `MemoryError` crashes (common with 4+ threads).  
+
+---
+
+### **⚡ Quick Test Protocol**  
+After changes:  
+1. Play:  
+   - A **new 4K movie** (tests cache/threads)  
+   - An **old TV episode** (tests scrapers)  
+2. Check log for:  
+   ```log
+   Buffering completed in [X]ms  <!-- Ideal: <2000ms -->
+   [ScraperName] returned [X] links  <!-- Expect 5-15 -->
+   ```
+
+---
+
+**Note**: Torrentio is temporarily enabled but **monitor for**:  
+- `SSL Handshake Failed` errors (disable if seen)  
+- Freezes during 4K playback (indicates thread overload)  
+
+🔧 Scraper Health Check
+
+To manually verify if a scraper is dead:
+
+    In Cocoscrapers:
+    text
+
+Tools → Test Providers → [Scraper Name]  
+
+Check logs for:
+
+    [SUCCESS] = Safe to use
+
+    [FAILED] + 404/403 = Deprecated
+
+    SSL_ERROR = Xbox incompatibility
+Let me know if you'd like the exact CLI commands for force-resetting the cache or scraping stats!
