@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One S Kodi Optimization Checklist</title>
+    <style>
+        :root {
+            --primary: #107c10;
+            --secondary: #0f5e0f;
+            --accent: #e91e63;
+            --light: #f5f5f5;
+            --dark: #222;
+            --warning: #ff9800;
+            --success: #4caf50;
+            --danger: #f44336;
+            --info: #2196f3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .badge {
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .setting {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .setting:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .setting-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .step {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .step:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95rem;
+        }
+        
+        .note {
+            background: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tip {
+            background: #e3f2fd;
+            border-left: 4px solid var(--info);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid var(--danger);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .success {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .enable {
+            background: var(--success);
+            color: white;
+        }
+        
+        .disable {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .log-example {
+            background: #e0e0e0;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        
+        .file-list {
+            list-style-type: none;
+        }
+        
+        .file-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .file-list li:before {
+            content: "📄";
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Xbox One S Kodi Optimization Checklist</h1>
+            <p class="subtitle">Verified June 2024 for Cocoscrapers 1.0.37 + Real-Debrid</p>
+            <span class="badge">Optimized for Xbox One S Performance</span>
+        </header>
+        
+        <div class="content">
+            <!-- System Settings Section -->
+            <div class="section">
+                <h2 class="section-title">🔧 System Settings</h2>
+                
+                <div class="setting">
+                    <h3 class="setting-title">📌 Cache Adjustment</h3>
+                    <div class="step">Increase to 128MB:</div>
+                    <div class="step">Edit <code>advancedsettings.xml</code>:</div>
+                    <pre class="code-block">&lt;cache&gt;
+  &lt;memorysize&gt;134217728&lt;/memorysize&gt; &lt;!-- 128MB --&gt;
+  &lt;buffermode&gt;1&lt;/buffermode&gt;         &lt;!-- "Buffer all network filesystems" --&gt;
+  &lt;readfactor&gt;20&lt;/readfactor&gt;
+&lt;/cache&gt;</pre>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">🔊 Audio Configuration <span style="font-size: 0.9rem; font-weight: normal;">(For Vizio D50-9X)</span></h3>
+                    <div class="step"><strong>Output Device:</strong> <code>HDMI - Digital Output (Virtual Audio Device)</code></div>
+                    <div class="step"><strong>Output Configuration:</strong> <code>Fixed</code> (Set to <strong>48kHz</strong>)</div>
+                    <div class="step"><strong>Enable:</strong> <code>Sync playback to display</code></div>
+                    <div class="step"><strong>Audio Offset:</strong> <code>+100ms</code> (if lipsync issues persist)</div>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">📺 Video Playback</h3>
+                    <div class="step"><strong>Disable</strong> all hardware acceleration</div>
+                    <div class="step"><strong>Match Refresh Rate:</strong> <code>On Start/Stop</code> (Settings > Player > Videos)</div>
+                </div>
+            </div>
+            
+            <!-- Maintenance Tasks Section -->
+            <div class="section">
+                <h2 class="section-title">🧹 Maintenance Tasks</h2>
+                
+                <div class="setting">
+                    <h3 class="setting-title">🧽 Clean Library</h3>
+                    <div class="step">Go to: <code>Settings > Media > Library</code></div>
+                    <div class="step">→ <code>Clean Library</code> (removes dead links)</div>
+                    <div class="step"><strong>For deep clean:</strong> Delete these files:</div>
+                    <ul class="file-list">
+                        <li><code>MyVideos*.db</code></li>
+                        <li><code>Textures13.db</code></li>
+                    </ul>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">🔍 Scraper Setup (Cocoscrapers)</h3>
+                    <div class="step"><span class="status enable">ENABLE</span> <code>1337x</code></div>
+                    <div class="step"><span class="status enable">ENABLE</span> <code>Kickass2</code> (with filters below)</div>
+                    <div class="step"><span class="status enable">ENABLE</span> <code>Torrentio</code> (monitor for crashes)</div>
+                    
+                    <div class="step"><span class="status disable">DISABLE</span> <code>EZTV</code> (confirmed broken)</div>
+                    <div class="step"><span class="status disable">DISABLE</span> <code>TorrentGalaxy</code>/<code>YTS</code> (deprecated)</div>
+                    
+                    <div class="step"><strong>Kickass2 Filters:</strong></div>
+                    <pre class="code-block">min_seeders: 5
+max_results: 10</pre>
+                </div>
+            </div>
+            
+            <!-- Pro Tips Section -->
+            <div class="section">
+                <h2 class="section-title">🔍 Pro Tips</h2>
+                
+                <div class="setting">
+                    <h3 class="setting-title">💾 Accessing U: Drive (Xbox File System)</h3>
+                    <div class="step"><strong>Method 1 (Kodi):</strong></div>
+                    <div class="step"><code>File Manager > Profile Directory (special://profile)/</code></div>
+                    
+                    <div class="step"><strong>Method 2 (USB):</strong></div>
+                    <div class="step">1. Plug USB into Xbox</div>
+                    <div class="step">2. In Kodi: <code>Add Source > U:\Users\UserMgr0\AppData\Local\Packages\...</code></div>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">📝 Log Monitoring</h3>
+                    <div class="step">Enable debug: <code>Settings > Logging > Debugging</code></div>
+                    <div class="step">Key terms to grep:</div>
+                    <div class="step"><code>Win32Networking</code> (Xbox throttling)</div>
+                    <div class="step"><code>CAE::Initialize</code> (audio issues)</div>
+                    <div class="step"><code>Cocoscrapers: [SUCCESS]</code> (scraper health)</div>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">⚙️ Max Threads Explained</h3>
+                    <div class="step"><strong>What it is:</strong> Number of simultaneous scrapers allowed.</div>
+                    <div class="step"><strong>Why "2" on Xbox?</strong></div>
+                    <div class="step">- Xbox's <strong>1.75GHz CPU</strong> can't handle more without freezing.</div>
+                    <div class="step">- Prevents <code>MemoryError</code> crashes (common with 4+ threads).</div>
+                </div>
+            </div>
+            
+            <!-- Quick Test Protocol Section -->
+            <div class="section">
+                <h2 class="section-title">⚡ Quick Test Protocol</h2>
+                
+                <div class="step">After changes:</div>
+                <div class="step">1. Play:</div>
+                <div class="step" style="margin-left: 20px;">- A <strong>new 4K movie</strong> (tests cache/threads)</div>
+                <div class="step" style="margin-left: 20px;">- An <strong>old TV episode</strong> (tests scrapers)</div>
+                
+                <div class="step">2. Check log for:</div>
+                <pre class="code-block">Buffering completed in [X]ms  &lt;!-- Ideal: &lt;2000ms --&gt;
+[ScraperName] returned [X] links  &lt;!-- Expect 5-15 --&gt;</pre>
+                
+                <div class="note">
+                    <h3 class="setting-title">⚠️ Important Note</h3>
+                    <p>Torrentio is temporarily enabled but <strong>monitor for</strong>:</p>
+                    <div class="step"><code>SSL Handshake Failed</code> errors (disable if seen)</div>
+                    <div class="step">Freezes during 4K playback (indicates thread overload)</div>
+                </div>
+                
+                <div class="setting">
+                    <h3 class="setting-title">🔧 Scraper Health Check</h3>
+                    <div class="step">To manually verify if a scraper is dead:</div>
+                    <div class="step">In Cocoscrapers:</div>
+                    <div class="step"><code>Tools → Test Providers → [Scraper Name]</code></div>
+                    
+                    <div class="step">Check logs for:</div>
+                    <div class="success">
+                        <div class="step"><code>[SUCCESS]</code> = Safe to use</div>
+                        <div class="step"><code>[FAILED] + 404/403</code> = Deprecated</div>
+                        <div class="step"><code>SSL_ERROR</code> = Xbox incompatibility</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Optimized Xbox One S Kodi Checklist | Generated June 2024</p>
+            <p>Ready to upload - No external dependencies</p>
+        </footer>
+    </div>
+</body>
+</html>
