@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One S Kodi Optimization Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #107c10;
+            --secondary: #0f5e0f;
+            --accent: #e91e63;
+            --light: #f5f5f5;
+            --dark: #121212;
+            --warning: #ff9800;
+            --success: #4caf50;
+            --danger: #f44336;
+            --info: #2196f3;
+            --code-bg: #2d2d2d;
+            --card-bg: rgba(40, 40, 40, 0.7);
+            --section-bg: rgba(30, 30, 30, 0.85);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 15px;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--section-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 12px;
+            font-weight: 300;
+        }
+        
+        .badge {
+            background: var(--accent);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .section.active {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            border-color: rgba(16, 124, 16, 0.4);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .section-title .icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .section-title.active .icon {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+        }
+        
+        .setting {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .setting:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .setting-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+        }
+        
+        .step {
+            margin-bottom: 15px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        .step:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.8rem;
+            top: -8px;
+        }
+        
+        .code-block {
+            background: var(--code-bg);
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border-left: 4px solid var(--primary);
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .note {
+            background: rgba(255, 152, 0, 0.15);
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tip {
+            background: rgba(33, 150, 243, 0.15);
+            border-left: 4px solid var(--info);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning {
+            background: rgba(244, 67, 54, 0.15);
+            border-left: 4px solid var(--danger);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .success {
+            background: rgba(76, 175, 80, 0.15);
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .enable {
+            background: var(--success);
+            color: white;
+        }
+        
+        .disable {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .log-example {
+            background: rgba(224, 224, 224, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 15px 0;
+            border-left: 3px solid var(--info);
+        }
+        
+        .file-list {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        .file-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        .file-list li:before {
+            content: "📄";
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+        }
+        
+        .xbox-logo {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            opacity: 0.2;
+            font-size: 3rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.8);
+            color: #aaa;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .icon-large {
+            font-size: 1.6rem;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #ffcc66;
+            word-break: break-word;
+        }
+        
+        .mobile-hint {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 20px 15px;
+            }
+            
+            header h1 {
+                font-size: 1.6rem;
+                gap: 10px;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .badge {
+                font-size: 0.9rem;
+                padding: 6px 15px;
+            }
+            
+            .content {
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .section {
+                padding: 18px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+                padding-bottom: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .setting {
+                margin-bottom: 18px;
+                padding-bottom: 18px;
+            }
+            
+            .step {
+                font-size: 1rem;
+                padding-left: 25px;
+                margin-bottom: 14px;
+            }
+            
+            .mobile-hint {
+                display: block;
+            }
+            
+            .xbox-logo {
+                font-size: 2.5rem;
+                top: 12px;
+                right: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .setting-title {
+                font-size: 1.1rem;
+            }
+            
+            .step {
+                font-size: 0.95rem;
+            }
+            
+            .icon-large {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fas fa-gamepad"></i>
+                Xbox One S Kodi Optimization
+            </h1>
+            <p class="subtitle">Verified June 2024 for Cocoscrapers 1.0.37 + Real-Debrid</p>
+            <span class="badge">Optimized for Xbox One S Performance</span>
+            <div class="xbox-logo">
+                <i class="fab fa-xbox"></i>
+            </div>
+        </header>
+        
+        <div class="content">
+            <!-- System Settings Section -->
+            <div class="section">
+                <h2 class="section-title" onclick="toggleSection(this)">
+                    <span><i class="fas fa-cog icon-large"></i> System Settings</span>
+                    <i class="fas fa-chevron-down icon"></i>
+                </h2>
+                <div class="section-content">
+                    <div class="mobile-hint">Tap to expand/collapse sections</div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-memory"></i> Cache Adjustment</h3>
+                        <div class="step">Increase to 128MB:</div>
+                        <div class="step">Edit <code>advancedsettings.xml</code>:</div>
+                        <pre class="code-block">&lt;cache&gt;
+  &lt;memorysize&gt;134217728&lt;/memorysize&gt; &lt;!-- 128MB --&gt;
+  &lt;buffermode&gt;1&lt;/buffermode&gt;         &lt;!-- "Buffer all network filesystems" --&gt;
+  &lt;readfactor&gt;20&lt;/readfactor&gt;
+&lt;/cache&gt;</pre>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-volume-up"></i> Audio Configuration <span style="font-size: 0.9rem; font-weight: normal;">(For Vizio D50-9X)</span></h3>
+                        <div class="step"><strong>Output Device:</strong> <code>HDMI - Digital Output (Virtual Audio Device)</code></div>
+                        <div class="step"><strong>Output Configuration:</strong> <code>Fixed</code> (Set to <strong>48kHz</strong>)</div>
+                        <div class="step"><strong>Enable:</strong> <code>Sync playback to display</code></div>
+                        <div class="step"><strong>Audio Offset:</strong> <code>+100ms</code> (if lipsync issues persist)</div>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-tv"></i> Video Playback</h3>
+                        <div class="step"><strong>Disable</strong> all hardware acceleration</div>
+                        <div class="step"><strong>Match Refresh Rate:</strong> <code>On Start/Stop</code> (Settings > Player > Videos)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Maintenance Tasks Section -->
+            <div class="section">
+                <h2 class="section-title" onclick="toggleSection(this)">
+                    <span><i class="fas fa-broom icon-large"></i> Maintenance Tasks</span>
+                    <i class="fas fa-chevron-down icon"></i>
+                </h2>
+                <div class="section-content">
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-trash-alt"></i> Clean Library</h3>
+                        <div class="step">Go to: <code>Settings > Media > Library</code></div>
+                        <div class="step">→ <code>Clean Library</code> (removes dead links)</div>
+                        <div class="step"><strong>For deep clean:</strong> Delete these files:</div>
+                        <ul class="file-list">
+                            <li><code>MyVideos*.db</code></li>
+                            <li><code>Textures13.db</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-search"></i> Scraper Setup (Cocoscrapers)</h3>
+                        <div class="step"><span class="status enable">ENABLE</span> <code>1337x</code></div>
+                        <div class="step"><span class="status enable">ENABLE</span> <code>Kickass2</code> (with filters below)</div>
+                        <div class="step"><span class="status enable">ENABLE</span> <code>Torrentio</code> (monitor for crashes)</div>
+                        
+                        <div class="step"><span class="status disable">DISABLE</span> <code>EZTV</code> (confirmed broken)</div>
+                        <div class="step"><span class="status disable">DISABLE</span> <code>TorrentGalaxy</code>/<code>YTS</code> (deprecated)</div>
+                        
+                        <div class="step"><strong>Kickass2 Filters:</strong></div>
+                        <pre class="code-block">min_seeders: 5
+max_results: 10</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pro Tips Section -->
+            <div class="section">
+                <h2 class="section-title" onclick="toggleSection(this)">
+                    <span><i class="fas fa-lightbulb icon-large"></i> Pro Tips</span>
+                    <i class="fas fa-chevron-down icon"></i>
+                </h2>
+                <div class="section-content">
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-hdd"></i> Accessing U: Drive (Xbox File System)</h3>
+                        <div class="step"><strong>Method 1 (Kodi):</strong></div>
+                        <div class="step"><code>File Manager > Profile Directory (special://profile)/</code></div>
+                        
+                        <div class="step"><strong>Method 2 (USB):</strong></div>
+                        <div class="step">1. Plug USB into Xbox</div>
+                        <div class="step">2. In Kodi: <code>Add Source > U:\Users\UserMgr0\AppData\Local\Packages\...</code></div>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-file-alt"></i> Log Monitoring</h3>
+                        <div class="step">Enable debug: <code>Settings > Logging > Debugging</code></div>
+                        <div class="step">Key terms to grep:</div>
+                        <div class="log-example">Win32Networking <span style="color: #aaa;">(Xbox throttling)</span></div>
+                        <div class="log-example">CAE::Initialize <span style="color: #aaa;">(audio issues)</span></div>
+                        <div class="log-example">Cocoscrapers: [SUCCESS] <span style="color: #aaa;">(scraper health)</span></div>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-microchip"></i> Max Threads Explained</h3>
+                        <div class="step"><strong>What it is:</strong> Number of simultaneous scrapers allowed.</div>
+                        <div class="step"><strong>Why "2" on Xbox?</strong></div>
+                        <div class="step">- Xbox's <strong>1.75GHz CPU</strong> can't handle more without freezing.</div>
+                        <div class="step">- Prevents <code>MemoryError</code> crashes (common with 4+ threads).</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Test Protocol Section -->
+            <div class="section">
+                <h2 class="section-title" onclick="toggleSection(this)">
+                    <span><i class="fas fa-bolt icon-large"></i> Quick Test Protocol</span>
+                    <i class="fas fa-chevron-down icon"></i>
+                </h2>
+                <div class="section-content">
+                    <div class="step">After changes:</div>
+                    <div class="step">1. Play:</div>
+                    <div class="step" style="margin-left: 25px;">- A <strong>new 4K movie</strong> (tests cache/threads)</div>
+                    <div class="step" style="margin-left: 25px;">- An <strong>old TV episode</strong> (tests scrapers)</div>
+                    
+                    <div class="step">2. Check log for:</div>
+                    <pre class="code-block">Buffering completed in [X]ms  &lt;!-- Ideal: &lt;2000ms --&gt;
+[ScraperName] returned [X] links  &lt;!-- Expect 5-15 --&gt;</pre>
+                    
+                    <div class="warning">
+                        <h3 class="setting-title"><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
+                        <p>Torrentio is temporarily enabled but <strong>monitor for</strong>:</p>
+                        <div class="step"><code>SSL Handshake Failed</code> errors (disable if seen)</div>
+                        <div class="step">Freezes during 4K playback (indicates thread overload)</div>
+                    </div>
+                    
+                    <div class="setting">
+                        <h3 class="setting-title"><i class="fas fa-heartbeat"></i> Scraper Health Check</h3>
+                        <div class="step">To manually verify if a scraper is dead:</div>
+                        <div class="step">In Cocoscrapers:</div>
+                        <div class="step"><code>Tools → Test Providers → [Scraper Name]</code></div>
+                        
+                        <div class="step">Check logs for:</div>
+                        <div class="success">
+                            <div class="step"><code>[SUCCESS]</code> = Safe to use</div>
+                            <div class="step"><code>[FAILED] + 404/403</code> = Deprecated</div>
+                            <div class="step"><code>SSL_ERROR</code> = Xbox incompatibility</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Optimized Xbox One S Kodi Checklist | Generated June 2024</p>
+            <p><i class="fas fa-check-circle"></i> Mobile-Optimized for iPhone & Android</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Mobile optimization functions
+        function toggleSection(element) {
+            const section = element.parentElement;
+            const content = section.querySelector('.section-content');
+            const icon = element.querySelector('.icon');
+            
+            section.classList.toggle('active');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.opacity = 0;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = 1;
+            }
+            
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+        
+        // Initialize all sections as expanded on desktop, collapsed on mobile
+        function initSections() {
+            const sections = document.querySelectorAll('.section');
+            const isMobile = window.innerWidth < 768;
+            
+            sections.forEach(section => {
+                const title = section.querySelector('.section-title');
+                const content = section.querySelector('.section-content');
+                const icon = title.querySelector('.icon');
+                
+                if (isMobile) {
+                    content.style.maxHeight = null;
+                    content.style.opacity = 0;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.opacity = 1;
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        }
+        
+        // Initialize on load and on resize
+        window.addEventListener('load', initSections);
+        window.addEventListener('resize', initSections);
+    </script>
+</body>
+</html>
