@@ -1,0 +1,746 @@
+# Ultimate Xbox One S Kodi & Real-Debrid Setup Checklist
+
+Here's a comprehensive HTML checklist with everything we've discussed, optimized for Xbox One S:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One S Kodi & Real-Debrid Setup Checklist</title>
+    <style>
+        :root {
+            --xbox-green: #107c10;
+            --xbox-dark: #0f0f0f;
+            --xbox-light: #f2f2f2;
+            --accent: #e91e63;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: var(--xbox-light);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--xbox-dark), var(--xbox-green));
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(16, 124, 16, 0.3) 0%, rgba(15, 15, 15, 0) 70%);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .xbox-logo {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: var(--xbox-green);
+            border-radius: 15px;
+            position: relative;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(16, 124, 16, 0.7);
+        }
+        
+        .xbox-logo::before {
+            content: "X";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #333;
+        }
+        
+        .section {
+            background: rgba(25, 25, 25, 0.8);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            border-color: var(--xbox-green);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--xbox-green);
+        }
+        
+        .section-title i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--xbox-green);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--xbox-green);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: #e0e0e0;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+        
+        .checklist {
+            list-style-type: none;
+        }
+        
+        .checklist li {
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            transition: background 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        .checklist li:hover {
+            background: rgba(50, 50, 50, 0.8);
+            border-color: #555;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 15px;
+            margin-top: 4px;
+            accent-color: var(--xbox-green);
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+        
+        .checklist label {
+            flex: 1;
+            cursor: pointer;
+        }
+        
+        .note {
+            background: rgba(16, 124, 16, 0.15);
+            border-left: 4px solid var(--xbox-green);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .warning {
+            background: rgba(233, 30, 99, 0.15);
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .tip {
+            background: rgba(41, 121, 255, 0.15);
+            border-left: 4px solid #2979ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .controller-hint {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 0 5px;
+            border: 1px solid #555;
+        }
+        
+        .controller-hint::before {
+            content: "[";
+            color: #aaa;
+        }
+        
+        .controller-hint::after {
+            content: "]";
+            color: #aaa;
+        }
+        
+        .troubleshooting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .troubleshooting-table th, 
+        .troubleshooting-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        
+        .troubleshooting-table th {
+            background: rgba(16, 124, 16, 0.3);
+            color: #e0e0e0;
+        }
+        
+        .troubleshooting-table tr:hover {
+            background: rgba(50, 50, 50, 0.5);
+        }
+        
+        .troubleshooting-table td:first-child {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .badge-important {
+            background: var(--accent);
+        }
+        
+        .badge-note {
+            background: var(--xbox-green);
+        }
+        
+        .badge-tip {
+            background: #2979ff;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #aaa;
+            background: rgba(10, 10, 10, 0.8);
+        }
+        
+        .completed-section {
+            background: rgba(16, 124, 16, 0.1);
+            border-color: var(--xbox-green);
+        }
+        
+        .section-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--xbox-green);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .main-content, .sidebar {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Xbox One S Kodi Optimization & Real-Debrid Setup</h1>
+            <div class="subtitle">Complete step-by-step checklist for optimal streaming performance</div>
+            <div class="xbox-logo"></div>
+        </header>
+        
+        <div class="content">
+            <div class="main-content">
+                <!-- Initial Setup Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Initial Setup</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step1">
+                            <label for="step1">Install <strong>Kodi 20 Nexus</strong> or newer from Xbox Store</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step2">
+                            <label for="step2">Configure Xbox network: <span class="controller-hint">Xbox Button</span> → Settings → Network → Test NAT Type (ensure "Open")</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step3">
+                            <label for="step3">Install key add-ons: 
+                                <ul style="margin-top: 10px; padding-left: 20px;">
+                                    <li><strong>Fen/Fen Light</strong> (video add-on)</li>
+                                    <li><strong>Fentastic</strong> skin (lightweight UI)</li>
+                                    <li><strong>OpenWizard</strong> (maintenance tool)</li>
+                                </ul>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step4">
+                            <label for="step4">Apply Fentastic skin: Kodi Settings → Interface → Skin → Fentastic</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <span class="badge badge-note">TIP</span> Use Kodi Bae repository for easy add-on installation
+                    </div>
+                </div>
+                
+                <!-- System Optimization Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>System Optimization</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step5">
+                            <label for="step5">Disable animations: Settings → Interface → Skin → Disable "Enable animations"</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step6">
+                            <label for="step6">Reduce background tasks: Settings → System → Logging → Disable "Enable debug logging"</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step7">
+                            <label for="step7">Configure OpenWizard for automatic cache cleaning every 24 hours</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step8">
+                            <label for="step8">Disable unused add-ons and services</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">PERFORMANCE</span> Use Fen Light instead of full Fen for maximum performance on Xbox One S
+                    </div>
+                </div>
+                
+                <!-- Real-Debrid WebDAV Setup Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Real-Debrid WebDAV Setup</h2>
+                    </div>
+                    
+                    <h3>Get Credentials</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step9">
+                            <label for="step9">Log in to <a href="https://real-debrid.com/" style="color: #4fc3f7; text-decoration: none;">Real-Debrid.com</a></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step10">
+                            <label for="step10">Navigate to <strong>Security → Devices & Apps</strong></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step11">
+                            <label for="step11">Note your WebDAV credentials:
+                                <ul style="margin-top: 10px; padding-left: 20px;">
+                                    <li>WebDAV Username (e.g., XZQ6E2YF)</li>
+                                    <li>WebDAV Password</li>
+                                    <li>URL: <code>https://dav.real-debrid.com</code></li>
+                                </ul>
+                            </label>
+                        </li>
+                    </ul>
+                    
+                    <h3>Kodi Configuration</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step12">
+                            <label for="step12">In Kodi: Videos → Files → Add videos → Browse</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step13">
+                            <label for="step13">Select <strong>Add network location</strong></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step14">
+                            <label for="step14">Configure:
+                                <ul style="margin-top: 10px; padding-left: 20px;">
+                                    <li><strong>Protocol:</strong> WebDAV (HTTPS) <span class="badge badge-important">⚠️ Not WinLib/SMB!</span></li>
+                                    <li><strong>Server:</strong> <code>dav.real-debrid.com</code></li>
+                                    <li><strong>Port:</strong> 443</li>
+                                    <li><strong>Username/Password:</strong> Your WebDAV credentials</li>
+                                    <li><strong>Remote Path:</strong> Blank or <code>/Downloads/</code></li>
+                                </ul>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step15">
+                            <label for="step15">Name source: <code>RealDebrid</code> → Set content to <strong>"None"</strong></label>
+                        </li>
+                    </ul>
+                    
+                    <h3>Fen Configuration</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step16">
+                            <label for="step16">Open Fen Settings → Accounts → Real-Debrid</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step17">
+                            <label for="step17">Authorize Real-Debrid account (log in when prompted)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step18">
+                            <label for="step18">Set <strong>Cloud Source</strong> to <strong>"WebDAV"</strong></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step19">
+                            <label for="step19">Enter WebDAV URL and credentials (same as above)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step20">
+                            <label for="step20">Save settings and restart Kodi</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <span class="badge badge-important">CRITICAL</span> When adding the source, double-check protocol is set to "WebDAV (HTTPS)" - cursor misplacement is common!
+                    </div>
+                </div>
+                
+                <!-- Access & Testing Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Access & Testing</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step21">
+                            <label for="step21">Access files via Fen: Add-ons → Fen → My Files → Real-Debrid Cloud</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step22">
+                            <label for="step22">Wait 10 seconds for files to populate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step23">
+                            <label for="step23">Test playback with various file types (SD, HD, 4K)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step24">
+                            <label for="step24">Verify Kodi source: Videos → Files → RealDebrid</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">NAVIGATION</span> Use <span class="controller-hint">View</span> button for context menu in Fen
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <!-- Xbox Controller Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Xbox Controller</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step25">
+                            <label for="step25">Map <span class="controller-hint">View</span> button to Context Menu</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step26">
+                            <label for="step26">Disable "Use HQ scalers" in Skin Settings to reduce lag</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step27">
+                            <label for="step27">Adjust navigation speed: Settings → Interface → Configure skin</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <span class="badge badge-note">CONTROLS</span>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li><span class="controller-hint">A</span> = Select</li>
+                            <li><span class="controller-hint">B</span> = Back</li>
+                            <li><span class="controller-hint">View</span> = Context Menu</li>
+                            <li><span class="controller-hint">Menu</span> = Options</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Troubleshooting Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Troubleshooting</h2>
+                    </div>
+                    
+                    <table class="troubleshooting-table">
+                        <tr>
+                            <th>Issue</th>
+                            <th>Solution</th>
+                        </tr>
+                        <tr>
+                            <td>Empty Cloud</td>
+                            <td>Fen → Tools → Clear Cache → Refresh Cloud</td>
+                        </tr>
+                        <tr>
+                            <td>"Access Denied"</td>
+                            <td>Reset WebDAV password → Update credentials</td>
+                        </tr>
+                        <tr>
+                            <td>Kodi Crashes</td>
+                            <td>Use Fen Light; disable animations</td>
+                        </tr>
+                        <tr>
+                            <td>Stuttering Playback</td>
+                            <td>Fen Settings → Playback → Cache Size → Set to 0.5GB</td>
+                        </tr>
+                        <tr>
+                            <td>Controller Lag</td>
+                            <td>Disable skin animations; reduce resolution</td>
+                        </tr>
+                        <tr>
+                            <td>Files Not Showing</td>
+                            <td>Confirm Remote Path is blank or /Downloads/</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- Maintenance Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Maintenance</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step28">
+                            <label for="step28">Weekly: Clear cache via OpenWizard</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step29">
+                            <label for="step29">Monthly: Reauthorize Real-Debrid in Fen</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step30">
+                            <label for="step30">After Updates: Verify WebDAV source</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step31">
+                            <label for="step31">Quarterly: Reinstall Kodi for clean setup</label>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Pro Tips Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <h2>Pro Tips</h2>
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">PERFORMANCE</span> Stream directly from Fen → My Files for best results
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">NAVIGATION</span> Slow cursor movement when selecting WebDAV protocol
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">LIBRARY</span> Don't add Real-Debrid to Kodi's video library - use Fen's interface
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">XBOX</span> For 4K streaming, use wired Ethernet connection
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Ultimate Xbox One S Kodi & Real-Debrid Setup Checklist | Designed for optimal performance</p>
+            <p>Always use legal content sources | Kodi is a media player only</p>
+        </div>
+    </div>
+
+    <script>
+        // Add progress tracking functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const sections = document.querySelectorAll('.section');
+            
+            // Load saved state from localStorage
+            checkboxes.forEach(checkbox => {
+                const savedState = localStorage.getItem(checkbox.id);
+                if (savedState === 'checked') {
+                    checkbox.checked = true;
+                    
+                    // Mark parent section as completed
+                    const section = checkbox.closest('.section');
+                    if (section) {
+                        section.classList.add('completed-section');
+                    }
+                }
+            });
+            
+            // Update progress bars
+            updateProgressBars();
+            
+            // Add event listeners to all checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        localStorage.setItem(this.id, 'checked');
+                        
+                        // Mark parent section as completed
+                        const section = this.closest('.section');
+                        if (section) {
+                            section.classList.add('completed-section');
+                        }
+                    } else {
+                        localStorage.removeItem(this.id);
+                        const section = this.closest('.section');
+                        if (section) {
+                            section.classList.remove('completed-section');
+                        }
+                    }
+                    
+                    updateProgressBars();
+                });
+            });
+            
+            function updateProgressBars() {
+                sections.forEach(section => {
+                    const checkboxesInSection = section.querySelectorAll('input[type="checkbox"]');
+                    const checkedBoxes = section.querySelectorAll('input[type="checkbox"]:checked');
+                    const percentage = (checkedBoxes.length / checkboxesInSection.length) * 100;
+                    
+                    // Create or update progress bar
+                    let progressBar = section.querySelector('.progress-bar');
+                    if (!progressBar) {
+                        progressBar = document.createElement('div');
+                        progressBar.className = 'progress-bar';
+                        const progressFill = document.createElement('div');
+                        progressFill.className = 'progress-fill';
+                        progressBar.appendChild(progressFill);
+                        
+                        const progressContainer = document.createElement('div');
+                        progressContainer.className = 'section-progress';
+                        progressContainer.innerHTML = `<div>Progress: ${Math.round(percentage)}%</div>`;
+                        progressContainer.appendChild(progressBar);
+                        
+                        section.appendChild(progressContainer);
+                    }
+                    
+                    const progressFill = progressBar.querySelector('.progress-fill');
+                    progressFill.style.width = `${percentage}%`;
+                    
+                    const progressText = section.querySelector('.section-progress > div');
+                    if (progressText) {
+                        progressText.textContent = `Progress: ${Math.round(percentage)}%`;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
