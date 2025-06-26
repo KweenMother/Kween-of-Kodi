@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox One S Kodi & Fen Light Setup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --xbox-green: #107c10;
+            --xbox-dark: #0f0f0f;
+            --xbox-light: #f2f2f2;
+            --accent: #e91e63;
+            --fen-blue: #2196F3;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: var(--xbox-light);
+            padding: 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--xbox-dark), var(--fen-blue));
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(33, 150, 243, 0.3) 0%, rgba(15, 15, 15, 0) 70%);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .xbox-logo {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: var(--xbox-green);
+            border-radius: 15px;
+            position: relative;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(16, 124, 16, 0.7);
+        }
+        
+        .xbox-logo::before {
+            content: "X";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #333;
+        }
+        
+        .section {
+            background: rgba(25, 25, 25, 0.8);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            border-color: var(--fen-blue);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--fen-blue);
+        }
+        
+        .section-title i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--fen-blue);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--fen-blue);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: #e0e0e0;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+        
+        .checklist {
+            list-style-type: none;
+        }
+        
+        .checklist li {
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            transition: background 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        .checklist li:hover {
+            background: rgba(50, 50, 50, 0.8);
+            border-color: #555;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 15px;
+            margin-top: 4px;
+            accent-color: var(--fen-blue);
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+        }
+        
+        .checklist label {
+            flex: 1;
+            cursor: pointer;
+        }
+        
+        .note {
+            background: rgba(33, 150, 243, 0.15);
+            border-left: 4px solid var(--fen-blue);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .warning {
+            background: rgba(233, 30, 99, 0.15);
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .tip {
+            background: rgba(41, 121, 255, 0.15);
+            border-left: 4px solid #2979ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .controller-hint {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 0 5px;
+            border: 1px solid #555;
+        }
+        
+        .controller-hint::before {
+            content: "[";
+            color: #aaa;
+        }
+        
+        .controller-hint::after {
+            content: "]";
+            color: #aaa;
+        }
+        
+        .troubleshooting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .troubleshooting-table th, 
+        .troubleshooting-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        
+        .troubleshooting-table th {
+            background: rgba(33, 150, 243, 0.3);
+            color: #e0e0e0;
+        }
+        
+        .troubleshooting-table tr:hover {
+            background: rgba(50, 50, 50, 0.5);
+        }
+        
+        .troubleshooting-table td:first-child {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .badge-important {
+            background: var(--accent);
+        }
+        
+        .badge-note {
+            background: var(--fen-blue);
+        }
+        
+        .badge-tip {
+            background: #2979ff;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #aaa;
+            background: rgba(10, 10, 10, 0.8);
+        }
+        
+        .completed-section {
+            background: rgba(33, 150, 243, 0.1);
+            border-color: var(--fen-blue);
+        }
+        
+        .section-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--fen-blue);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .password-box {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px dashed #e91e63;
+        }
+        
+        .password {
+            font-family: monospace;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 5px;
+        }
+        
+        .view-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .view-type {
+            flex: 1;
+            min-width: 150px;
+            background: rgba(40,40,40,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+        
+        .view-type h4 {
+            color: var(--fen-blue);
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .main-content, .sidebar {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-gamepad"></i> Xbox One S Kodi Setup</h1>
+            <div class="subtitle">Fen Light + Fentastic + Real-Debrid - Optimized Checklist</div>
+            <div class="xbox-logo"></div>
+        </header>
+        
+        <div class="content">
+            <div class="main-content">
+                <!-- Initial Setup Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-cogs"></i>
+                        <h2>Initial Setup & System Configuration</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step1">
+                            <label for="step1">Install <strong>Kodi 20 Nexus</strong> from Xbox Store</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step2">
+                            <label for="step2">Set Kodi to <strong>Expert Mode</strong>: Settings → Interface → Level: Expert</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step3">
+                            <label for="step3">Connect USB keyboard for faster text input</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step4">
+                            <label for="step4">Install <strong>Fen Light</strong> via repository (not full Fen)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step5">
+                            <label for="step5">Apply <strong>Fentastic</strong> skin: Settings → Interface → Skin → Fentastic</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <span class="badge badge-note">KEYBOARD TIP</span> Use keyboard for repository URLs: <code>https://kodi-bae.com/</code>
+                    </div>
+                </div>
+                
+                <!-- Add-ons & Services Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-plug"></i>
+                        <h2>Essential Add-ons & Services</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step6">
+                            <label for="step6">Install <strong>Jet Extractors 3.1.5</strong> for premium link resolving</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step7">
+                            <label for="step7">Install <strong>InputStream Helper 0.6.0</strong> for smooth playback</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step8">
+                            <label for="step8">Install <strong>The Crew</strong> and <strong>Daddylive</strong> add-ons</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step9">
+                            <label for="step9">Configure <strong>Real-Debrid</strong> account in Fen Light</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="password-box">
+                        <h3>Adult Content Passwords</h3>
+                        <div class="password">LOCKED</div>
+                        <p><i class="fas fa-hand-point-right"></i> Press <span class="controller-hint">A</span> to reveal: <span class="password" style="font-size:1.2rem;">6969</span></p>
+                    </div>
+                </div>
+                
+                <!-- Fen Light Configuration Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-sliders-h"></i>
+                        <h2>Fen Light Configuration</h2>
+                    </div>
+                    
+                    <h3>Playback Settings</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step10">
+                            <label for="step10">Set <strong>Cache Size</strong> to 0.5GB: Playback → Cache Size</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step11">
+                            <label for="step11"><strong>Disable Adjust Rate</strong>: Playback → Playback Adjust → Disable</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step12">
+                            <label for="step12">Set <strong>Default Action</strong> to Directory: Navigation → Default Action</label>
+                        </li>
+                    </ul>
+                    
+                    <h3>View Settings</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step13">
+                            <label for="step13">Configure <strong>Movie Views</strong> to your preference</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step14">
+                            <label for="step14">Configure <strong>TV Show Views</strong> to your preference</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="view-types">
+                        <div class="view-type">
+                            <h4>Recommended Movie Views</h4>
+                            <ul>
+                                <li>Wall View</li>
+                                <li>Info Wall</li>
+                                <li>Poster Showcase</li>
+                            </ul>
+                        </div>
+                        <div class="view-type">
+                            <h4>Recommended TV Views</h4>
+                            <ul>
+                                <li>Banner</li>
+                                <li>Poster</li>
+                                <li>Wide List</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Real-Debrid WebDAV Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-cloud"></i>
+                        <h2>Real-Debrid WebDAV Setup</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step15">
+                            <label for="step15">Get WebDAV credentials: Real-Debrid → Security → Devices & Apps</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step16">
+                            <label for="step16">In Kodi: Videos → Files → Add videos → Add network location</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step17">
+                            <label for="step17">Set protocol to <strong>WebDAV (HTTPS)</strong> (not WinLib/SMB)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step18">
+                            <label for="step18">Configure:
+                                <ul style="margin-top:10px;padding-left:20px">
+                                    <li>Server: <code>dav.real-debrid.com</code></li>
+                                    <li>Port: <code>443</code></li>
+                                    <li>Username: Your WebDAV ID</li>
+                                    <li>Password: WebDAV password</li>
+                                </ul>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step19">
+                            <label for="step19">Set content to <strong>"None"</strong></label>
+                        </li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <span class="badge badge-important">WARNING</span> Triple-check protocol is set to WebDAV (HTTPS) - cursor misplacement is common!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <!-- Trakt Configuration -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-sync-alt"></i>
+                        <h2>Trakt Configuration</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step20">
+                            <label for="step20">Authorize Trakt in Fen Light: Accounts → Trakt</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step21">
+                            <label for="step21">Set <strong>Trakt Sync Interval</strong> to 600 minutes</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step22">
+                            <label for="step22">Enable <strong>Trakt Progress</strong> for resume points</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step23">
+                            <label for="step23">Set <strong>Trakt Lists</strong> for personalized collections</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <span class="badge badge-note">SYNC TIP</span> 600 minutes = 10 hour sync interval (optimal for Xbox)
+                    </div>
+                </div>
+                
+                <!-- Xbox Controller Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-gamepad"></i>
+                        <h2>Xbox Controller Setup</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step24">
+                            <label for="step24">Map <span class="controller-hint">View</span> button to Context Menu</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step25">
+                            <label for="step25">Disable "Use HQ scalers" in Skin Settings</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step26">
+                            <label for="step26">Adjust navigation speed: Settings → Interface → Skin</label>
+                        </li>
+                    </ul>
+                    
+                    <div class="note">
+                        <span class="badge badge-note">CONTROLS</span>
+                        <ul style="margin-top:10px;padding-left:20px">
+                            <li><span class="controller-hint">A</span> = Select</li>
+                            <li><span class="controller-hint">B</span> = Back</li>
+                            <li><span class="controller-hint">View</span> = Context</li>
+                            <li><span class="controller-hint">Menu</span> = Options</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Troubleshooting Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-tools"></i>
+                        <h2>Troubleshooting</h2>
+                    </div>
+                    
+                    <table class="troubleshooting-table">
+                        <tr>
+                            <th>Issue</th>
+                            <th>Solution</th>
+                        </tr>
+                        <tr>
+                            <td>Empty RD Cloud</td>
+                            <td>Fen Light → Tools → Clear Cache → Refresh Cloud</td>
+                        </tr>
+                        <tr>
+                            <td>Playback Stuttering</td>
+                            <td>Disable Adjust Rate; Set cache to 0.5GB</td>
+                        </tr>
+                        <tr>
+                            <td>WebDAV Access Denied</td>
+                            <td>Reset WebDAV password in RD account</td>
+                        </tr>
+                        <tr>
+                            <td>Slow Navigation</td>
+                            <td>Disable skin animations; Use Fen Light</td>
+                        </tr>
+                        <tr>
+                            <td>Add-on Not Working</td>
+                            <td>Reinstall Jet Extractors 3.1.5</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- Maintenance Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-calendar-check"></i>
+                        <h2>Maintenance</h2>
+                    </div>
+                    
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="step27">
+                            <label for="step27">Weekly: Clear Fen Light cache</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step28">
+                            <label for="step28">Monthly: Reauthorize Real-Debrid</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step29">
+                            <label for="step29">After Updates: Verify settings</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="step30">
+                            <label for="step30">Quarterly: Fresh Kodi install</label>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Pro Tips Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-lightbulb"></i>
+                        <h2>Pro Tips</h2>
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">VIEWS</span> Set unique views for each section (Movies, TV Shows, etc.)
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">NAVIGATION</span> Use USB keyboard for complex text input
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">PERFORMANCE</span> Fen Light + Fentastic = Best Xbox experience
+                    </div>
+                    
+                    <div class="tip">
+                        <span class="badge badge-tip">SETTINGS</span> Always use Expert Mode for full control
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Xbox One S Kodi Optimization Checklist | Fen Light + Fentastic + Real-Debrid</p>
+            <p>Always use legal content sources | Kodi is a media player only</p>
+        </div>
+    </div>
+
+    <script>
+        // Add progress tracking functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const sections = document.querySelectorAll('.section');
+            
+            // Load saved state from localStorage
+            checkboxes.forEach(checkbox => {
+                const savedState = localStorage.getItem(checkbox.id);
+                if (savedState === 'checked') {
+                    checkbox.checked = true;
+                    
+                    // Mark parent section as completed
+                    const section = checkbox.closest('.section');
+                    if (section) {
+                        section.classList.add('completed-section');
+                    }
+                }
+            });
+            
+            // Update progress bars
+            updateProgressBars();
+            
+            // Add event listeners to all checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        localStorage.setItem(this.id, 'checked');
+                        
+                        // Mark parent section as completed
+                        const section = this.closest('.section');
+                        if (section) {
+                            section.classList.add('completed-section');
+                        }
+                    } else {
+                        localStorage.removeItem(this.id);
+                        const section = this.closest('.section');
+                        if (section) {
+                            section.classList.remove('completed-section');
+                        }
+                    }
+                    
+                    updateProgressBars();
+                });
+            });
+            
+            function updateProgressBars() {
+                sections.forEach(section => {
+                    const checkboxesInSection = section.querySelectorAll('input[type="checkbox"]');
+                    const checkedBoxes = section.querySelectorAll('input[type="checkbox"]:checked');
+                    const percentage = (checkedBoxes.length / checkboxesInSection.length) * 100;
+                    
+                    // Create or update progress bar
+                    let progressBar = section.querySelector('.progress-bar');
+                    if (!progressBar) {
+                        progressBar = document.createElement('div');
+                        progressBar.className = 'progress-bar';
+                        const progressFill = document.createElement('div');
+                        progressFill.className = 'progress-fill';
+                        progressBar.appendChild(progressFill);
+                        
+                        const progressContainer = document.createElement('div');
+                        progressContainer.className = 'section-progress';
+                        progressContainer.innerHTML = `<div>Progress: ${Math.round(percentage)}%</div>`;
+                        progressContainer.appendChild(progressBar);
+                        
+                        section.appendChild(progressContainer);
+                    }
+                    
+                    const progressFill = progressBar.querySelector('.progress-fill');
+                    progressFill.style.width = `${percentage}%`;
+                    
+                    const progressText = section.querySelector('.section-progress > div');
+                    if (progressText) {
+                        progressText.textContent = `Progress: ${Math.round(percentage)}%`;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
