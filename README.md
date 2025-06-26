@@ -1,0 +1,1 @@
+This repository is a cummulation of my encounters with Kodi, Real-Debrid, FENtastic, Fen Light, Trakt, Various Add-ons, settings & configurations. I use my encounters to update the index which is the only file that should be followed. - Shimmer me timbers, pirates!
