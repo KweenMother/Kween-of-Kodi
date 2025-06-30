@@ -51,7 +51,7 @@
 
 ## ❌ ProtonVPN Free Performance
 - Speeds tested: 100 KB/s down, 2 KB/s up
-- Unusable for streaming
+- Almost unusable for streaming
 - Not Real-Debrid friendly
 - Free tier locked to 3 overloaded servers
 
@@ -76,4 +76,3 @@
 - Keep VPN hotspot as backup in case ISP filtering returns
 - Consider dedicated VPN router for plug-and-play tunneling
 - Documented configuration for future troubleshooting
-*Generated with ChatGPT — session saved by user request.*
