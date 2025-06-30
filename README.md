@@ -167,7 +167,7 @@ I proved them wrong.
 >
 ## ⚠️ Disclaimer
 
-> This guide is intended for **educational and informational purposes only**.  
+> This guide, repository and its contents are intended for **educational and informational purposes only**.  
 > The configurations, tools, and workarounds described herein are meant to help users **understand and manage their own internet connections**, privacy, and device behavior.  
 >
 > The author **does not condone or promote piracy**, copyright infringement, or violation of service agreements. Kodi and related add-ons mentioned in this guide are **open-source tools**, and their functionality depends on **third-party sources and configurations** which the author does not control or host.
