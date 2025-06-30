@@ -143,14 +143,6 @@ I proved them wrong.
 
 ---
 
-## 🔮 Next Missions
-- [ ] Set up **VPN router** to auto-tunnel Xbox + all devices  
-- [ ] Submit **formal complaint to FCC/FTC** (documented throttling)  
-- [ ] Publish full **GitHub guide or Reddit how-to** to help others  
-- [ ] Share template for ISP escalation (because *they will lie*)
-
----
-
 ## 💾 Notes for Future Use
 - Keep VPN & iPhone 16 hotspot as backup in case ISP (Optimum) filtering returns  
 - Consider dedicated VPN router for plug-and-play tunneling  
@@ -165,6 +157,7 @@ I proved them wrong.
 > It was a **revolution in home networking**.  
 > And now I own every byte I pay for.
 >
+> Checkout: [Kween's Ultimate Kodi Installation Guide](https://kweenmother.github.io/Kween-of-Kodi/)
 
 ---
 
