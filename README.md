@@ -164,3 +164,17 @@ I proved them wrong.
 > This wasn’t a fix.  
 > It was a **revolution in home networking**.  
 > And now I own every byte I pay for.
+>
+## ⚠️ Disclaimer
+
+> This guide is intended for **educational and informational purposes only**.  
+> The configurations, tools, and workarounds described herein are meant to help users **understand and manage their own internet connections**, privacy, and device behavior.  
+>
+> The author **does not condone or promote piracy**, copyright infringement, or violation of service agreements. Kodi and related add-ons mentioned in this guide are **open-source tools**, and their functionality depends on **third-party sources and configurations** which the author does not control or host.
+>
+> By using this guide, you agree that:
+> - You are responsible for how you use any tools, services, or workarounds described.
+> - You will comply with all local laws, service terms, and network usage agreements.
+> - The author is **not liable** for any misuse, account suspension, or data loss resulting from implementing these steps.
+
+> ⚖️ Always use streaming tools and VPN services **legally, ethically, and responsibly.**
