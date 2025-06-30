@@ -9,7 +9,7 @@
 ---
 
 ## 🔧 Problem Overview
-- The Loop and Mad Titan Sports add-ons were not working (streams failed, content wouldn’t load).
+- The Loop, Mad Titan Sports, & Daddylive add-ons were not working (streams failed, content wouldn’t load).
 - Common Kodi errors included:
   - `ConnectionResetError(10054)` – forcibly closed by remote host
   - HTTP `404` and `501` errors (Real-Debrid & IPTV links)
@@ -76,6 +76,7 @@
 - Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot 
 - ISP block was silently lifted after escalation
 - Real-Debrid errors (501) resolved
+- `ConnectionResetError(10054)` resolved
 - Kodi add-ons stable via VPN & iPhone 16 Personal Hotspot
 
 ---
