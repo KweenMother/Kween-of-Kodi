@@ -23,7 +23,7 @@ I proved them wrong.
 ### 🧨 1. The Nuclear Option
 - Powered up **Windscribe VPN** on my PC  
 - Shared the connection via **Windows Mobile Hotspot** to my Xbox  
-- Add-ons instantly worked  
+- Kodi Add-ons and Real-Debrid instantly worked  
 - ✅ `ConnectionResetError` gone  
 - ✅ Streams loaded in seconds  
 - ✅ Real-Debrid 501 errors *obliterated*
