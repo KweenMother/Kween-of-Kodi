@@ -60,7 +60,7 @@ I proved them wrong.
 ### Devices & Tools
 - **Device:** Xbox One S  
 - **Kodi Version:** 21.2 (Omega)  
-- **Add-ons:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, Trakt, Real-Debrid  
+- **Add-ons:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, with Trakt & Real-Debrid  
 - **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
 - **Network:** Altice Gateway 6E + Wi-Fi Extender  
 
