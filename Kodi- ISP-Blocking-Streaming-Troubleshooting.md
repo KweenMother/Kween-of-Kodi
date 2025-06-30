@@ -68,11 +68,10 @@
 ---
 
 ## ✅ Final Results
-- Streams work reliably via VPN tunnel
-- Streams work reliably with iPhone 16 Personal Hotspot
+- Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot
 - ISP block was silently lifted after escalation
 - Real-Debrid errors (501) resolved
-- Kodi add-ons stable via VPN
+- Kodi add-ons stable via VPN & iPhone 16 Personal Hotspot
 
 ---
 
