@@ -62,7 +62,7 @@ I proved them wrong.
 - **Kodi Version:** 21.2 (Omega)  
 - **Add-ons:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, Trakt, Real-Debrid  
 - **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
-- **Network:** Optimum Altice Gateway 6E + Wi-Fi Extender  
+- **Network:** Altice Gateway 6E + Wi-Fi Extender  
 
 ---
 
@@ -152,10 +152,10 @@ I proved them wrong.
 ---
 
 ## 💾 Notes for Future Use
-- Keep VPN & iPhone 16 hotspot as backup in case ISP filtering returns  
+- Keep VPN & iPhone 16 hotspot as backup in case ISP (Optimum) filtering returns  
 - Consider dedicated VPN router for plug-and-play tunneling  
 - Documented configuration for future troubleshooting  
-- File complaint against ISP if filtering does return
+- File complaint against ISP (Optimum) if filtering does return
 
 ---
 
