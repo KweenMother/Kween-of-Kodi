@@ -108,6 +108,10 @@ I proved them wrong.
 ---
 
 ## 📲 iPhone 16 (Personal Hotspot Method)
+### Requirements:
+- iPhone 16 or any generation with Wi-Fi/Hotspot
+- Any mobile device with Wi-Fi/Hotspot
+
 ### Steps Taken:
 1. Enabled Personal Hotspot on iPhone 16  
 2. Connected Xbox to iPhone 16 hotspot  
@@ -132,7 +136,7 @@ I proved them wrong.
 
 ## ✅ Final Results
 - Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot  
-- ISP block was silently lifted after escalation  
+- ISP (Optimum) block was silently lifted after escalation  
 - Real-Debrid errors (501) resolved  
 - ConnectionResetError(10054) resolved  
 - Kodi add-ons stable now
@@ -157,6 +161,6 @@ I proved them wrong.
 
 ## 🧠 Final Thought
 
-> “This wasn’t a fix.  
+> This wasn’t a fix.  
 > It was a **revolution in home networking**.  
-> And now I own every byte I pay for.”
+> And now I own every byte I pay for.
