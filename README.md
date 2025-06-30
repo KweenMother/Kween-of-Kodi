@@ -165,6 +165,9 @@ I proved them wrong.
 > It was a **revolution in home networking**.  
 > And now I own every byte I pay for.
 >
+
+---
+
 ## ⚠️ Disclaimer
 
 > This guide, repository and its contents are intended for **educational and informational purposes only**.  
