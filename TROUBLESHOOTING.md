@@ -1,8 +1,8 @@
-# Kodi + ISP Altice/Optimum Blocking Streaming Domains + VPN + Troubleshooting + Victory
+# Kodi + ISP Optimum (Altice) Blocking Streaming Domains + VPN + Troubleshooting + Victory
 **Date:** June 29, 2025  
 **Device:** Xbox One S  
 **Kodi Version:** 21.2 (Omega)  
-**Add-ons Used:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, Trakt, Real-Debrid  
+**Add-ons Used:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, with Trakt & Real-Debrid  
 **Network:** Altice Gateway 6E + Wi-Fi Extender  
 **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
 
@@ -19,14 +19,14 @@
 
 ## 🔍 Root Cause
 - Not a Kodi issue, not a configuration problem.
-- Confirmed ISP (Altice) is filtering or DPI-blocking specific stream protocols.
+- Confirmed ISP (Optimum) is filtering or DPI-blocking specific stream protocols.
 - DNS override attempts failed.
 - Block was at the network/packet level.
 
 ---
 
 ## ☎️ ISP Escalation
-- Contacted Altice 3 times.
+- Contacted Optimum 3 times.
 - Explained all diagnostic steps (hotspot, VPN, different devices, different networks).
 - Asked for credit due to degraded service.
 - Mentioned switching to mobile provider → within 1 minute, service was unblocked.
@@ -59,7 +59,7 @@
 
 ## 😐 ProtonVPN Free Performance
 - Speeds tested: 100 KB/s down, 2 KB/s up
-- Almost unusable for streaming but <b>did</b> work
+- Almost unusable for streaming but <i><b>did</b></i> work
 - Not Real-Debrid friendly
 - Free tier locked to 3 overloaded servers
 
