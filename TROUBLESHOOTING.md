@@ -50,6 +50,10 @@
 ---
 
 ## 📲 iPhone 16 (Personal Hotspot Method)
+### Requirements:
+- iPhone 16 or any generation with Wi-Fi/Hotspot
+- Any mobile phone with Wi-Fi/Hotspot
+
 ### Steps Taken:
 1. Enabled Personal Hotspot on iPhone 16
 2. Connected Xbox to iPhone 16 hotspot
