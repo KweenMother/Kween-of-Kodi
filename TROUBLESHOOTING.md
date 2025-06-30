@@ -78,7 +78,7 @@
 
 ## ✅ Final Results
 - Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot 
-- ISP block was silently lifted after escalation
+- ISP (Optimum) block was silently lifted after escalation
 - Real-Debrid errors (501) resolved
 - ConnectionResetError(10054) resolved
 - Kodi add-ons stable now
@@ -86,7 +86,7 @@
 ---
 
 ## 💾 Notes for Future Use
-- Keep VPN & iPhone 16 hotspot as backup in case ISP filtering returns
+- Keep VPN & iPhone 16 hotspot as backup in case ISP (Optimum) filtering returns
 - Consider dedicated VPN router for plug-and-play tunneling
 - Documented configuration for future troubleshooting
-- File complaint against ISP if filtering does return
+- File complaint against ISP (Optimum) if filtering does return
