@@ -1,4 +1,4 @@
-# Kodi + VPN Troubleshooting with Altice ISP
+# Kodi + ISP Altice/Optimum Blocking Streaming Domains + VPN + Troubleshooting + Victory
 **Date:** June 29, 2025  
 **Device:** Xbox One S  
 **Kodi Version:** 21 (Omega)  
@@ -76,7 +76,4 @@
 - Keep VPN hotspot as backup in case ISP filtering returns
 - Consider dedicated VPN router for plug-and-play tunneling
 - Documented configuration for future troubleshooting
-
----
-
 *Generated with ChatGPT — session saved by user request.*
