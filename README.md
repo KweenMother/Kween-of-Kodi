@@ -13,7 +13,7 @@ After enduring:
 
 I proved them wrong.
 
-> **The moment I connected to a mobile hotspot — everything worked.**  
+> **The moment I connected to a mobile hotspot - everything worked.**  
 > That was the beginning of the end for ISP gaslighting.
 
 ---
@@ -58,7 +58,7 @@ I proved them wrong.
 ## 🛠️ Technical Appendix
 
 ### Devices & Tools
-- **Device:** Xbox One S  
+- **Device:** Xbox One S & Walmart 4k Streaming TV 
 - **Kodi Version:** 21.2 (Omega)  
 - **Add-ons:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, with Trakt & Real-Debrid  
 - **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
@@ -168,7 +168,7 @@ I proved them wrong.
 >
 > The author **does not condone or promote piracy**, copyright infringement, or violation of service agreements. Kodi and related add-ons mentioned in this guide are **open-source tools**, and their functionality depends on **third-party sources and configurations** which the author does not control or host.
 >
-> By using this guide, you agree that:
+> By using this guide and repository you agree that:
 > - You are responsible for how you use any tools, services, or workarounds described.
 > - You will comply with all local laws, service terms, and network usage agreements.
 > - The author is **not liable** for any misuse, account suspension, or data loss resulting from implementing these steps.
