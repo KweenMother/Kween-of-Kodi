@@ -1,6 +1,6 @@
 # 🚀 "THE INTERNET I WAS OWED" — My Victory Over Optimum’s Throttling
 ### 📅 Date: June 30, 2025  
-### ⚔️ Hero: *[Kween Mother]*  
+### ⚔️ Hero: *Kween Mother*  
 ### 🏴‍☠️ Villain: *Optimum (Altice) ISP*  
 
 ---
@@ -51,9 +51,7 @@ I proved them wrong.
 
 > *"The Internet I'm Getting Now...  
 > Is the Internet I Was Always Owed."*  
-> — *[Kween], 2025*
-
-🧥 *Coming Soon: Black hoodie, neon blue text, Kodi logo on the sleeve*
+> — *Kween, 2025*
 
 ---
 
