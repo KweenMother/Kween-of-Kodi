@@ -57,9 +57,9 @@
 
 ---
 
-## ❌ ProtonVPN Free Performance
+## 😐 ProtonVPN Free Performance
 - Speeds tested: 100 KB/s down, 2 KB/s up
-- Almost unusable for streaming
+- Almost unusable for streaming but <b>did</b> work
 - Not Real-Debrid friendly
 - Free tier locked to 3 overloaded servers
 
