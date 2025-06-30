@@ -46,9 +46,14 @@
 4. Connected Xbox to hotspot
 5. Verified VPN IP using whatismyip.com
 6. Kodi streams + Real-Debrid now working flawlessly
-7. Enabled Personal Hotspot on iPhone 16
-8. Connected Xbox to iPhone 16 hotspot
-9. Kodi streams + Real-Debrid now working impeccably 
+
+---
+
+## 📲 iPhone 16 (Personal Hotspot Method)
+### Steps Taken:
+1. Enabled Personal Hotspot on iPhone 16
+2. Connected Xbox to iPhone 16 hotspot
+3. Kodi streams + Real-Debrid now working impeccably 
 
 ---
 
@@ -68,7 +73,7 @@
 ---
 
 ## ✅ Final Results
-- Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot
+- Streams work reliably via VPN tunnel & iPhone 16 Personal Hotspot 
 - ISP block was silently lifted after escalation
 - Real-Debrid errors (501) resolved
 - Kodi add-ons stable via VPN & iPhone 16 Personal Hotspot
@@ -79,3 +84,4 @@
 - Keep VPN & iPhone 16 hotspot as backup in case ISP filtering returns
 - Consider dedicated VPN router for plug-and-play tunneling
 - Documented configuration for future troubleshooting
+- File complaint against ISP if filtering does return
