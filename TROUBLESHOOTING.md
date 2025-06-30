@@ -1,7 +1,7 @@
 # Kodi + ISP Altice/Optimum Blocking Streaming Domains + VPN + Troubleshooting + Victory
 **Date:** June 29, 2025  
 **Device:** Xbox One S  
-**Kodi Version:** 21 (Omega)  
+**Kodi Version:** 21.2 (Omega)  
 **Add-ons Used:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, Trakt, Real-Debrid  
 **Network:** Altice Gateway 6E + Wi-Fi Extender  
 **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
