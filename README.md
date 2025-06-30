@@ -51,7 +51,7 @@ I proved them wrong.
 
 > *"The Internet I'm Getting Now...  
 > Is the Internet I Was Always Owed."*  
-> — *Kween, 2025*
+> - *Kween, 2025*
 
 ---
 
