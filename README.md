@@ -1,4 +1,4 @@
-# 🚀 THE INTERNET I WAS OWED — My Victory Over Optimum’s Throttling
+# 🚀 THE INTERNET I WAS OWED - My Victory Over Optimum’s Throttling
 ### 📅 Date: June 30, 2025  
 ### ⚔️ Hero: *Kween*  
 ### 🏴‍☠️ Villain: *Optimum (Altice) ISP*  
