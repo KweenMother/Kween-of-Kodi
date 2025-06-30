@@ -1,13 +1,13 @@
 # 🚀 "THE INTERNET I WAS OWED" — My Victory Over Optimum’s Throttling
 ### 📅 Date: June 30, 2025  
-### ⚔️ Hero: *[Your Name or Gamertag]*  
-### 🏴‍☠️ Villain: *Optimum ISP*  
+### ⚔️ Hero: *[Kween Mother]*  
+### 🏴‍☠️ Villain: *Optimum (Altice) ISP*  
 
 ---
 
 ## 🔍 The Backstory
 After enduring:
-- ❌ Constant Kodi and Real-Debrid stream failures (`ConnectionResetError 10054`)  
+- ❌ Constant Kodi, Real-Debrid, The Loop, Mad Titan & Daddylive stream failures (`ConnectionResetError 10054`)  
 - ❌ 501 errors from Real-Debrid's CDN  
 - ❌ Optimum repeatedly claiming, *“It’s your device, not us”*
 
@@ -21,9 +21,9 @@ I proved them wrong.
 ## 💥 The Winning Tactics
 
 ### 🧨 1. The Nuclear Option
-- Installed **Windscribe VPN** on my PC  
+- Powered up **Windscribe VPN** on my PC  
 - Shared the connection via **Windows Mobile Hotspot** to my Xbox  
-- Kodi + Real-Debrid instantly worked  
+- Add-ons instantly worked  
 - ✅ `ConnectionResetError` gone  
 - ✅ Streams loaded in seconds  
 - ✅ Real-Debrid 501 errors *obliterated*
@@ -51,7 +51,7 @@ I proved them wrong.
 
 > *"The Internet I'm Getting Now...  
 > Is the Internet I Was Always Owed."*  
-> — *[Your Name], 2025*
+> — *[Kween], 2025*
 
 🧥 *Coming Soon: Black hoodie, neon blue text, Kodi logo on the sleeve*
 
@@ -64,7 +64,7 @@ I proved them wrong.
 - **Kodi Version:** 21.2 (Omega)  
 - **Add-ons:** FENtastic, Fen Light, The Loop, Mad Titan Sports, Daddylive, Trakt, Real-Debrid  
 - **Input Devices:** Rii X8 Wireless Mini Keyboard, Xbox Series S Controller, 1TB External HDD  
-- **Network:** Optimum Gateway 6E + Wi-Fi Extender  
+- **Network:** Optimum Altice Gateway 6E + Wi-Fi Extender  
 
 ---
 
