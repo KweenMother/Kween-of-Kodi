@@ -77,7 +77,7 @@
 - ISP block was silently lifted after escalation
 - Real-Debrid errors (501) resolved
 - ConnectionResetError(10054) resolved
-- Kodi add-ons stable via VPN & iPhone 16 Personal Hotspot
+- Kodi add-ons stable now
 
 ---
 
