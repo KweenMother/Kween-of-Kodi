@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>✨ Mother's Ultimate Kodi Installation Guide ✨🎬</title> <i>* A FENtastic &amp; Fen Light Centered Guide</i>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=DM+Sans:wght@400;700&display=swap');
+
+        
+:root {
+    --primary: #4E9AF1;
+    --secondary: #65C18C;
+    --accent: #FFCE73;
+    --dark: #1B1B1B;
+    --darker: #141414;
+    --light: #FAFAFA;
+    --highlight: #70E4EF;
+    --text: #EAEAEA;
+    --url: #6FB1FC;
+}
+
+/* Old Variables */ :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #FFE66D;
+            --dark: #121212;
+            --darker: #0A0A0A;
+            --light: #F7FFF7;
+            --highlight: #6BFF6B;
+            --text: #E0E0E0;
+            --url: #4DA6FF;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&family=Source+Code+Pro&display=swap');
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--dark);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(255,230,109,0.3);
+        }
+        
+        h2 {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: var(--darker);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 2px solid var(--accent);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            border-bottom: 2px dashed var(--primary);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background-color: var(--darker);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-left: 5px solid var(--primary);
+            position: relative;
+        }
+        
+        .step {
+            margin-bottom: 18px;
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary);
+            position: relative;
+        }
+        
+        .step:before {
+            content: "✨";
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            font-size: 1.2rem;
+        }
+        
+        .note {
+            background-color: #2A2A2A;
+            border-left: 5px solid var(--accent);
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+        
+        .important {
+            color: var(--accent);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255,230,109,0.3);
+        }
+        
+        .success {
+            color: var(--highlight);
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            padding: 15px;
+            background-color: rgba(107,255,107,0.1);
+            border-radius: 10px;
+            border: 1px dashed var(--highlight);
+        }
+        
+        .command {
+            color: var(--accent);
+            font-weight: bold;
+            font-family: 'Source Code Pro', monospace;
+            background-color: rgba(33,33,33,0.7);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        .url {
+            color: var(--url);
+            text-decoration: none;
+            word-break: break-all;
+            font-weight: bold;
+        }
+        
+        .url:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px rgba(77,166,255,0.5);
+        }
+        
+        .config-group {
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        
+        .config-item {
+            margin: 12px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .config-item:before {
+            content: "👉";
+            position: absolute;
+            left: -5px;
+            color: var(--secondary);
+        }
+        
+        .toggle-on {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        .toggle-off {
+            color: #FF6B6B;
+            font-weight: bold;
+        }
+        
+        .emoji {
+            font-size: 1.3em;
+            margin: 0 3px;
+            vertical-align: middle;
+        }
+        
+        .step-index {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .step-card {
+            background: linear-gradient(145deg, #1E1E1E, #252525);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(145deg, #252525, #2A2A2A);
+        }
+        
+        .step-title {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--secondary);
+            text-align: center;
+        }
+        
+        .finale {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--darker);
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid var(--accent);
+        }
+        
+        .finale h2 {
+            background: none;
+            color: var(--darker);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            border: none;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 40px 0;
+            border: none;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--darker);
+            padding: 10px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: none;
+        }
+        
+        .back-to-top:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .section-anchor {
+            position: absolute;
+            top: -80px;
+        }
+    
+.step-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.step-card {
+    background: #242424;
+    border-radius: 12px;
+    padding: 16px 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-top: 3px solid var(--primary);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    background: #2c2c2c;
+}
+
+.step-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.step-title .emoji {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .step-index {
+        grid-template-columns: 1fr !important;
+    }
+
+    .step {
+        padding-left: 12px;
+    }
+
+    .back-to-top {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<a class="back-to-top" href="#step-index-anchor">↑ Back to Top</a>
+<h1>✨ Mother's Ultimate Kodi Installation Guide ✨🎬</h1>
+<p class="subtitle">Your complete, straight-forward setup companion with all the steps spelled out!</p>
+<!-- ==================== -->
+<!-- ACCOUNTS AND SERVICES -->
+<!-- ==================== -->
+<div class="section">
+<h2>🔑 Accounts and Services Needed</h2>
+<div class="step">
+<span class="command">📧 Email address</span><br/>
+        (email for registering and activating various services. Gmail for Google TV)
+    </div>
+<div class="step">
+<span class="command">🔄 TraktTV</span><br/>
+<a class="url" href="https://trakt.tv">https://trakt.tv</a> (syncing kodi content/watchlists etc.)
+    </div>
+<div class="step">
+<span class="command">💎 All Debrid</span><br/>
+<a class="url" href="https://alldebrid.com">https://alldebrid.com</a> (25G/7day free trial)
+    </div>
+<div class="step">
+<span class="command">⚡ Real-Debrid</span><br/>
+<a class="url" href="https://real-debrid.com">https://real-debrid.com</a> (#1 choice)
+    </div>
+<div class="step">
+<span class="command">💰 Bitcoin @$20/6m</span><br/>
+        (for purchase of All Debrid/Real-Debrid. Debit/Credit cards may be used)
+    </div>
+<div class="step">
+<span class="command">🎬 OMDB API:</span><br/>
+<a class="url" href="https://omdbapi.com">omdbapi.com</a> (for getting ratings and extras)
+    </div>
+<div class="step">
+<span class="command">📋 MDBLIST API:</span><br/>
+<a class="url" href="https://mdblist.com">mdblist.com</a> (for ratings &amp; extras, make personal lists/categories. Get API KEY in Preferences)
+    </div>
+<div class="step">
+<span class="command">🗣️ Subtitles</span><br/>
+<a class="url" href="https://opensubtitles.com">opensubtitles.com</a> *Optional. When subtitles are unavailable for a title, you can download in 1 click while the title is playing
+    </div>
+<div class="step">
+<span class="command">📥 Kodi Download</span><br/>
+        Google Play Store or Microsoft Store on Xbox or <a class="url" href="https://kodi.tv/download">https://kodi.tv/download</a>. Firestick Install, Kodi (Android 64BIT) needs to be 'Side-loaded' with the Downloader app
+    </div>
+<div class="note">
+<span class="important">PRO TIP:</span> Attach an On-The-Go cable (OTG) &amp; Keyboard to your device to speed up 🏃🏾‍♀️ installation and configuration time. It takes 3x as long without. I recommend the Rii X8 Wireless Mini Keyboard and any inexpensive OTG cable, both which can be found on Amazon.
+    </div>
+</div>
+<!-- ============ -->
+<!-- REPOSITORIES -->
+<!-- ============ -->
+<div class="section">
+<h2>🏦 Repositories</h2>
+<div class="step">
+<span class="command">🔗 CocoScrapers</span><br/>
+<a class="url" href="https://cocojoe2411.github.io">https://cocojoe2411.github.io</a>
+</div>
+<div class="step">
+<span class="command">🔗 Fen Light</span><br/>
+<a class="url" href="https://umbrellaplug.github.io/">https://umbrellaplug.github.io/</a>
+</div>
+<div class="step">
+<span class="command">🔗 FENtastic Skin</span><br/>
+<a class="url" href="https://ivarbrandt.github.io/repository.ivarbrandt">https://ivarbrandt.github.io/repository.ivarbrandt</a>
+</div>
+<div class="step">
+<span class="command">🔗 YouTube Trailers</span><br/>
+<a class="url" href="https://slyguy.uk">https://slyguy.uk</a>
+</div>
+<div class="step">
+<span class="command">🔗 The Loop</span><br/>
+<a class="url" href="https://loopaddon.uk/theloop">https://loopaddon.uk/theloop</a>
+</div>
+<div class="step">
+<span class="command">🔗 Mad Titan Sports</span><br/>
+<a class="url" href="https://magnetic.website/repo">https://magnetic.website/repo</a>
+</div>
+<div class="step">
+<span class="command">🔗 The Crew &amp; DaddyLive</span><br/>
+<a class="url" href="https://team-crew.github.io">https://team-crew.github.io</a> (18+ Adult Playground PASSWORD = lol)
+    </div>
+</div>
+<!-- =================== -->
+<!-- INSTALLATION STEPS INDEX -->
+<!-- =================== -->
+<a id="step-index-anchor" class="section-anchor"></a>
+<div class="section">
+<h2>📘 Installation Steps Index</h2>
+<div class="step-index">
+<div class="step-card" onclick="location.href='#step-a'">
+<div class="step-title"><span class="emoji">🅰️</span> A</div>
+<div>Kodi Download/Install/Configuration</div>
+</div>
+<div class="step-card" onclick="location.href='#step-b'">
+<div class="step-title"><span class="emoji">🅱️</span> B</div>
+<div>Fentastic Skin Install</div>
+</div>
+<div class="step-card" onclick="location.href='#step-c'">
+<div class="step-title"><span class="emoji">©️</span> C</div>
+<div>Fen Light Install</div>
+</div>
+<div class="step-card" onclick="location.href='#step-d'">
+<div class="step-title"><span class="emoji">💀</span> D</div>
+<div>CocoScrapers Install</div>
+</div>
+<div class="step-card" onclick="location.href='#step-e'">
+<div class="step-title"><span class="emoji">🔑</span> E</div>
+<div>Fen Light Accounts</div>
+</div>
+<div class="step-card" onclick="location.href='#step-f'">
+<div class="step-title"><span class="emoji">⚙️</span> F</div>
+<div>Fen Light Configuration</div>
+</div>
+<div class="step-card" onclick="location.href='#step-g'">
+<div class="step-title"><span class="emoji">🎨</span> G</div>
+<div>Skin Configuration (Widgets)</div>
+</div>
+<div class="step-card" onclick="location.href='#step-h'">
+<div class="step-title"><span class="emoji">✨</span> H</div>
+<div>Final Skin Settings</div>
+</div>
+<div class="step-card" onclick="location.href='#step-i'">
+<div class="step-title"><span class="emoji">🏈</span> I</div>
+<div>Sports &amp; Live TV</div>
+</div>
+<div class="step-card" onclick="location.href='#step-j'">
+<div class="step-title"><span class="emoji">🎥</span> J</div>
+<div>YouTube for Trailers &amp; YouTube</div>
+</div>
+<div class="step-card" onclick="location.href='#step-k'">
+<div class="step-title"><span class="emoji">🗣️</span> K</div>
+<div>Subtitles Configuration</div>
+</div>
+</div>
+</div>
+<hr class="divider"/>
+<!-- ====================== -->
+<!-- STEP A: KODI INSTALL -->
+<!-- ====================== -->
+<div class="section" id="step-a">
+<span class="section-anchor" id="step-a-anchor"></span>
+<h2><span class="emoji">🅰️</span> A: Kodi Download/Install/Configuration</h2>
+<div class="step">
+<span class="command">1. Download &amp; Install</span> the latest Kodi build (Omega 21.2 as of today) to your Onn 4k TV, Xbox, PC, Fire TV or other target device. <a class="url" href="https://kodi.tv/download">https://kodi.tv/download</a> or Microsoft Store for Xbox or Google Play Store for Android or Google TV.
+    </div>
+<div class="step">
+<span class="command">2. Open Kodi</span> and select the ⚙ <span class="command">Settings gear icon</span> in the top left corner of 🏡 Home Screen.
+    </div>
+<div class="step">
+<span class="command">3. This is Kodi Settings</span>
+</div>
+<h3>🎬 Player Settings</h3>
+<div class="note">
+<span class="important">NOTE:</span> "Expert" MUST be selected to view and configure all settings. When you select the Player setting, click "Standard" in bottom left corner until "Expert" is selected.
+    </div>
+<div class="config-group">
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Adjust display refresh rate = <span class="toggle-off">Off</span></div>
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Sync playback to display = <span class="toggle-on">Enabled</span></div>
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Display 4:3 videos as = <span class="toggle-on">Stretch 16:9</span></div>
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Render method = <span class="toggle-on">Auto Detect</span> (<span class="toggle-on">DXVA on XBOX</span> for smooth playback)</div>
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Enable HQ scalers for scaling above = <span class="toggle-on">100%</span>. Try for at least <span class="toggle-on">70%</span> on older/weaker devices</div>
+<div class="config-item"><span class="command">Player &gt; Videos &gt;</span> Allow hardware acceleration = <span class="toggle-on">ON</span> (<span class="toggle-off">Off XBOX Only</span>)</div>
+</div>
+<h3>🗣️ Player Language Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Player &gt; Language &gt;</span> Preferred audio language = <span class="toggle-on">English</span></div>
+<div class="config-item"><span class="command">Player &gt; Language &gt;</span> Prefer default audio streams = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Player &gt; Language &gt;</span> Preferred subtitle language = <span class="toggle-on">English</span> for always on ( <span class="toggle-on">Forced only</span> = embedded by the title)</div>
+</div>
+<h3>💾 Media Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Media &gt; General &gt;</span> Show parent folder items = <span class="toggle-off">Off</span></div>
+<div class="config-item"><span class="command">Media &gt; Videos &gt;</span> Flatten TV show seasons = <span class="toggle-on">If only one season</span></div>
+<div class="config-item"><span class="command">Media &gt; Videos &gt;</span> Show empty TV shows = <span class="toggle-on">ON</span></div>
+</div>
+<h3>🌐 Services Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Services &gt; General &gt;</span> Device name = Name your device or not 😁</div>
+<div class="config-item"><span class="command">Services &gt; Control &gt;</span> Allow remote control via HTTP = <span class="toggle-on">ON</span> (must set username &amp; password 1st)</div>
+<div class="config-item"><span class="command">Services &gt; Control &gt;</span> Allow remote control from applications on this system = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Services &gt; Control &gt;</span> Allow remote control from applications on other systems = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Services &gt; Control &gt;</span> Username and Password &gt; Choose &amp; Set up Username &amp; Password or not 😁</div>
+<div class="config-item"><span class="command">Services &gt; Caching &gt;</span> Memory Size = <span class="toggle-on">128 MB</span> (Xbox) & Memory Size = <span class="toggle-on">32 MB</span> (Google TV, Fire TV, Onn 4k TV, etc.)</div>
+<div class="config-item"><span class="command">Services &gt; Caching &gt;</span> Read Factor = <span class="toggle-on">20x</span> (Xbox) & Read Factor = <span class="toggle-on">10x</span> (Google TV, Fire TV, Onn 4k TV, etc.)</div>       
+</div>
+<h3>🖥️ Interface Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Interface &gt; Regional</span> = Default or Configure to your preference</div>
+<div class="config-item"><span class="command">Interface &gt; Screensaver</span> = <span class="toggle-off">None</span></div>
+</div>
+<h3>⚙️ System Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">System &gt; Audio &gt;</span> Audio output device = <span class="toggle-on">HDMI - Digital Output (Virtual Audio Device)</span> or best for your device</div>
+<div class="config-item"><span class="command">System &gt; Audio &gt;</span> Output configuration = <span class="toggle-on">Fixed</span></div>
+<div class="config-item"><span class="command">System &gt; Input &gt;</span> Enable mouse and touch screen support = <span class="toggle-off">Off</span></div>
+<div class="config-item"><span class="command">System &gt; Add-ons &gt;</span> Updates = <span class="toggle-off">Never Check for Updates</span></div>
+<div class="config-item"><span class="command">System &gt; Add-ons &gt;</span> Show notifications = <span class="toggle-off">Off</span></div>
+<div class="config-item"><span class="command">System &gt; Add-ons &gt;</span> Unknown sources = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">System &gt; Add-ons &gt;</span> Update official add-ons from = <span class="toggle-on">Any repositories</span></div>
+</div>
+<div class="success">
+<span class="emoji">✅</span> Kodi is now installed and configured!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP B: FENTASTIC SKIN -->
+<!-- ====================== -->
+<div class="section" id="step-b">
+<span class="section-anchor" id="step-b-anchor"></span>
+<h2><span class="emoji">🅱️</span> B: Fentastic Skin Install</h2>
+<div class="step">
+<span class="command">1. Select 📂 File Manager</span> from the Settings menu.
+    </div>
+<div class="step">
+<span class="command">2. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">3. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">4. Type</span> <span class="url">https://ivarbrandt.github.io/repository.ivarbrandt</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">5. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">6. Type "Fentastic"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">7. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">8. Go back to the ⚙ Settings menu</span> and select Add-ons.
+    </div>
+<div class="step">
+<span class="command">9. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">10. Select Fentastic</span>
+</div>
+<div class="step">
+<span class="command">11. Select repository.ivarbrandt-x.x.x.zip</span> to download the Repository.
+    </div>
+<div class="step">
+<span class="command">12. Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">13. Select ivarbrandt's Repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select Look and feel</span>
+</div>
+<div class="step">
+<span class="command">15. Select Skin</span>
+</div>
+<div class="step">
+<span class="command">16. Select Fentastic &gt; Install</span> (If the skin doesn't switch automatically, Select Fentastic, Select Use)
+    </div>
+<div class="step">
+<span class="command">17. Select YES</span> to switch to this skin.
+    </div>
+<div class="step">
+<span class="command">18. Select YES</span> to Keep Skin
+    </div>
+<div class="step">
+<span class="command">19. Select Yes/OK</span> to the Pop-up.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> Fentastic is now installed!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP C: FEN LIGHT INSTALL -->
+<!-- ====================== -->
+<div class="section" id="step-c">
+<span class="section-anchor" id="step-c-anchor"></span>
+<h2><span class="emoji">©️</span> C: Fen Light Install</h2>
+<div class="step">
+<span class="command">1. Select the ⚙ Settings gear icon</span> in the top left corner of the Home Screen.
+    </div>
+<div class="step">
+<span class="command">2. Select 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">3. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">4. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">5. Type</span> <span class="url">https://umbrellaplug.github.io/</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">6. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">7. Type "Fen Light"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">8. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">9. Go back to the ⚙ Settings menu</span> and select Add-ons.
+    </div>
+<div class="step">
+<span class="command">10. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">11. Select Fen Light</span>💡
+    </div>
+<div class="step">
+<span class="command">12. Select repository.umbrella-x.x.zip</span> to download the Repository.
+    </div>
+<div class="step">
+<span class="command">13. Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select Umbrella Repository</span>☂
+    </div>
+<div class="step">
+<span class="command">15. Select VIDEO add-ons</span>
+</div>
+<div class="step">
+<span class="command">16. Select Fen Light</span>
+</div>
+<div class="step">
+<span class="command">17. Select Install Button</span>
+</div>
+<div class="step">
+<span class="command">18. Hit 🔙 Back button to Settings</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> Fen Light is now installed!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP D: COCOSCRAPERS INSTALL -->
+<!-- ====================== -->
+<div class="section" id="step-d">
+<span class="section-anchor" id="step-d-anchor"></span>
+<h2><span class="emoji">🍫</span> D: CocoScrapers Install</h2>
+<div class="step">
+<span class="command">1. Select 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">2. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">3. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">4. Type</span> <span class="url">https://cocojoe2411.github.io</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">5. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">6. Type "Coco"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">7. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">8. Go back to the Settings menu</span> and select Add-ons.
+    </div>
+<div class="step">
+<span class="command">9. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">10. Select Coco</span>
+</div>
+<div class="step">
+<span class="command">11. Select repository.cocoscrapers-x.x.x.zip</span> to download the Repository.
+    </div>
+<div class="step">
+<span class="command">12. Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">13. Select CocoScrapers Repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select PROGRAM add-ons</span>
+</div>
+<div class="step">
+<span class="command">15. Select CocoScrapers Module</span>
+</div>
+<div class="step">
+<span class="command">16. Press the Install button</span>
+</div>
+<div class="step">
+<span class="command">17. Go back to the ⚙ Settings menu</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> CocoScrapers is now installed and we will enable it in a couple of steps below.
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP E: FEN LIGHT ACCOUNTS -->
+<!-- ====================== -->
+<div class="section" id="step-e">
+<span class="section-anchor" id="step-e-anchor"></span>
+<h2><span class="emoji">🔑</span> E: Fen Light Accounts Tab Settings</h2>
+<div class="note">
+<span class="important">NOTE:</span> These steps are numbered in the order they appear in Fen Light Settings Accounts Tab
+    </div>
+<h3>#1 Authorize Trakt</h3>
+<div class="step">
+<span class="command">1. Settings &gt; Add-ons &gt; My add-ons &gt; Video Add-ons</span>
+</div>
+<div class="step">
+<span class="command">2. Select Fen Light &gt; Open &gt; Tools</span>🛠
+    </div>
+<div class="step">
+<span class="command">3. Select Settings</span>
+</div>
+<div class="step">
+<span class="command">4. Accounts &gt; TRAKT &gt; Select Authorize</span>
+</div>
+<div class="step">
+<span class="command">5. Note the Authorization code</span>
+</div>
+<div class="step">
+<span class="command">6. Using a web browser visit</span> <span class="url">trakt.tv/activate</span> and enter the authorization code (You must be logged into your Trakt account)
+    </div>
+<div class="step">
+<span class="command">7. Select Yes</span> to authorize Fen Light with Trakt.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> Trakt is now integrated with Fen Light!
+    </div>
+<h3>#2 Authorize OMDB</h3>
+<div class="step">
+<span class="command">1. Accounts &gt; OMDB &gt; API KEY</span>
+</div>
+<div class="step">
+<span class="command">2. Enter the Key code</span> emailed from omdbapi.com.
+    </div>
+<div class="step">
+<span class="command">3. Select OK</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> OMDB is now enabled in Fen Light!
+    </div>
+<h3>#3 Enable CocoScrapers</h3>
+<div class="step">
+<span class="command">1. Accounts &gt; External Scrapers &gt; Enable = <span class="toggle-on">ON</span></span>
+</div>
+<div class="step">
+<span class="command">2. Accounts &gt; External Scrapers &gt; Choose External Scrapers Module &gt; Select CocoScrapers Module</span>
+</div>
+<div class="step">
+<span class="command">3. Select OK</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> CocoScrapers is now enabled in Fen Light!
+    </div>
+<h3>#4 Authorize Real-Debrid</h3>
+<div class="step">
+<span class="command">1. Accounts tab &gt; Real Debrid &gt; Select Authorize</span>
+</div>
+<div class="step">
+<span class="command">2. Note the Authorization code</span>
+</div>
+<div class="step">
+<span class="command">3. Using a web browser visit</span> <span class="url">real-debrid.com MY Devices</span>, Add a new Device &amp; enter the authorization code (You must be logged in to your Real-Debrid account).
+    </div>
+<div class="step">
+<span class="command">4. Type "Fen Light"</span> and press Set that name.
+    </div>
+<div class="step">
+<span class="command">5. Back in Kodi</span>, you will see a success message. Press OK to continue.
+    </div>
+<div class="step">
+<span class="command">6. Enable SEARCH CLOUD STORAGE and its categories</span>
+</div>
+<div class="step">
+<span class="command">7. Priority set to 1</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> Real-Debrid is now integrated with Fen Light!
+    </div>
+<h3>Authorize All Debrid</h3>
+<div class="step">
+<span class="command">1. Accounts tab &gt; All Debrid &gt; Select Authorize</span>
+</div>
+<div class="step">
+<span class="command">2. Note the Authorization code</span>
+</div>
+<div class="step">
+<span class="command">3. Using a web browser visit</span> <span class="url">alldebrid.com pin code</span> and enter the authorization code (You must be logged in to your All Debrid account).
+    </div>
+<div class="step">
+<span class="command">4. Back in Kodi</span>, you will see a success message. Press OK to continue.
+    </div>
+<div class="step">
+<span class="command">5. Enable SEARCH CLOUD STORAGE & its categories</span>
+</div>
+<div class="step">
+<span class="command">6. Priority set to 2 or above</span>
+</div>
+<div class="step">
+<span class="command">7. Scroll 👈🏾 Left &amp; 🆙 up to the General Tab</span>
+</div>
+<div class="success">
+<span class="emoji">✅</span> All Debrid is now integrated with Fen Light!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP F: FEN LIGHT CONFIG -->
+<!-- ====================== -->
+<div class="section" id="step-f">
+<span class="section-anchor" id="step-f-anchor"></span>
+<h2><span class="emoji">⚙️</span> F: Fen Light Configuration</h2>
+<div class="note">
+<span class="important">NOTE:</span> The majority of configuration will come down to preference.
+    </div>
+<h3>General Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">General &gt; Manage addon updates &gt;</span> Update action = <span class="toggle-off">Off</span></div>
+<div class="config-item"><span class="command">General &gt; Trakt Cache &gt;</span> Resync Interval (MINS) = <span class="toggle-on">600</span></div>
+<div class="config-item"><span class="command">General &gt; Trakt Cache &gt;</span> Refresh widgets after Trakt sync = <span class="toggle-on">ON</span></div>
+</div>
+<h3>Features Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Features &gt; Special Open Actions &gt;</span> Movies = <span class="toggle-on">Both</span> (Opens Sets if available)</div>
+<div class="config-item"><span class="command">Features &gt; Special Open Actions &gt;</span> TV Shows = <span class="toggle-on">Open Extras</span></div>
+</div>
+<h3>Content Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Content &gt; Sorting - Personal Lists &gt;</span> In Progress = <span class="toggle-on">Recently Watched</span></div>
+<div class="config-item"><span class="command">Content &gt; Sorting - Personal Lists &gt;</span> Watched = <span class="toggle-on">Recently Watched</span></div>
+<div class="config-item"><span class="command">Content &gt; Sorting - Personal Lists &gt;</span> Collection = <span class="toggle-on">Title</span></div>
+<div class="config-item"><span class="command">Content &gt; Sorting - Personal Lists &gt;</span> Watchlist = <span class="toggle-on">Date Added</span></div>
+<div class="config-item"><span class="command">Content &gt; Widgets &gt;</span> Hide next page item in widgets = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Paginate lists when available = <span class="toggle-off">Off</span> ( 'Within Add-on Only' = Lightens GPU load)</div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Watched (Still Airing) TV Shows Location = <span class="toggle-on">Watched</span></div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Show special episodes when available = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Flatten TV show season = <span class="toggle-on">If only one season</span></div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Include unaired media in Trakt Watchlists = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Content &gt; General &gt;</span> Control View Types within add-on = <span class="toggle-on">ON</span></div>
+</div>
+<h3>Single Episode Lists</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Single Episode Lists &gt; General &gt;</span> Provide unwatched episode info = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Calculate content based on = <span class="toggle-on">Last Watched</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Sort Type = <span class="toggle-on">Recently Watched</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Sort Order = <span class="toggle-on">Descending</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Limit Used Watched History = <span class="toggle-on">60</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Include Trakt watchlist/fen light favorites = <span class="toggle-on">Both</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Include airdate in title = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Next episodes &gt;</span> Include unaired episodes when within 7 days = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Single Episode Lists &gt; Trakt Calendar &gt;</span> Show Future Days = <span class="toggle-on">14</span> or Default</div>
+</div>
+<h3>Results Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Results &gt; Display &gt;</span> Scraper timeout = <span class="toggle-on">5</span> (Increase or leave as Default if not getting any/enough sources)</div>
+<div class="config-item"><span class="command">Results &gt; General &gt;</span> Retry with all scrapers when no results = <span class="toggle-on">Auto</span></div>
+<div class="config-item"><span class="command">Results &gt; General &gt;</span> Ignore all filters when no results = <span class="toggle-on">Auto</span></div>
+<div class="config-item"><span class="command">Results &gt; Sorting &amp; Filtering &gt;</span> Max HEVC Quality = <span class="toggle-on">BEST FOR YOUR DEVICES</span> (Some devices cannot play or display HEVC, 3D, Dolby Vision &amp; will have to EXCLUDE)</div>
+<div class="config-item"><span class="command">Results &gt; Sorting &amp; Filtering &gt;</span> Filter results by size = <span class="toggle-off">Off</span> (Change filter preference with device &amp; internet speed)</div>
+<div class="config-item"><span class="command">Results &gt; Sorting &amp; Filtering &gt;</span> Max Autoplay HEVC Quality = <span class="toggle-on">Maximum quality your devices will allow</span></div>
+</div>
+<h3>Playback Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Playback &gt; Movies &gt;</span> Auto Play = <span class="toggle-on">ON</span> (<span class="toggle-off">Off</span> = Select Source of the title)</div>
+<div class="config-item"><span class="command">Playback &gt; Movies &gt;</span> Limit auto play quality = <span class="toggle-on">1080p</span> or best for your devices</div>
+<div class="config-item"><span class="command">Playback &gt; Movies &gt;</span> Automatically resume playback = <span class="toggle-off">Never</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Auto play = <span class="toggle-on">ON</span> (<span class="toggle-off">Off</span> = Select Source of the title)</div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Limit auto play quality = <span class="toggle-on">1080p</span> or best for your devices</div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Autoplay next episode = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> When no interaction with window = <span class="toggle-on">Play</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Next episode alert method = <span class="toggle-on">Window</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Show alert after (%) playback = <span class="toggle-on">97</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Use chapter info for alert when available = <span class="toggle-on">ON</span></div>
+<div class="config-item"><span class="command">Playback &gt; Episodes &gt;</span> Automatically resume playback = <span class="toggle-off">Never</span></div>
+</div>
+<div class="step">
+<span class="command"> 👓 SET VIEWS 👓</span>
+</div>
+<div class="step">
+<span class="command">1. Hit 🔙 back button into Fen Light to Videos &gt; Fen Light &gt; Tools &gt; Set Views</span>
+</div>
+<div class="step">
+<span class="command">2. Select Set Movies &gt; InfoWall</span> (or your preference) &amp; set view **use the left button to open the hidden side menu &amp; select viewtype.
+    </div>
+<div class="step">
+<span class="command">3. Select Set TV Shows &gt; InfoWall</span> (or your preference) &amp; set view
+    </div>
+<div class="step">
+<span class="command">4. Select Set Episodes &gt; WideInfoWall</span> (or your preference) &amp; set view
+    </div>
+<div class="success">
+<span class="emoji">✅</span> Fen Light is complete. You are now ready to Configure the Skin for your Kodi Home Theater! Keep going we're almost to the finish line!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP G: SKIN CONFIG -->
+<!-- ====================== -->
+<div class="section" id="step-g">
+<span class="section-anchor" id="step-g-anchor"></span>
+<h2><span class="emoji">🎨</span> G: Fentastic Skin Configuraton (Widgets)</h2>
+<div class="note">
+<span class="important">TIP:</span> For a video tutorial on Widget Configuration &amp; more, visit: 
+        <a class="url" href="https://odysee.com/@kodi_stuff:b/Create-a-kodi-Build-Fentastic-video-2:d">https://odysee.com/@kodi_stuff:b/Create-a-kodi-Build-Fentastic-video-2:d</a> Widgets start at about 5 min.</div class="step">
+</div>
+<div class="step">
+<span class="command">1. Go back to the ⚙ Settings menu</span>
+</div>
+<div class="step">
+<span class="command">2. Select Skin settings</span>
+</div>
+<div class="step">
+<span class="command">3. Main menu items &gt; select Remake menus and widgets &gt; select OK</span>
+</div>
+<h3>Movies Configuration</h3>
+<div class="step">
+<span class="command">4. Main menu items &gt; Movies &gt; select Set main menu path &gt; Fen Light &gt;&gt; Use Fen Light as path &gt; Rename to Movies &gt; select OK for Movies</span>
+</div>
+<div class="step">
+<span class="command">5. Main menu items &gt; Movies &gt; select Set widgets &gt; Widget 1: &gt; Fen Light &gt;&gt; Movies &gt;&gt; Trending &gt;&gt; Use Trending as path &gt; select Ok &gt; Choose widget display type &gt; Poster</span>
+</div>
+<div class="step">
+<span class="command">6. Widget 2: &gt; Fen Light &gt;&gt; Movies &gt;&gt; Genres &gt;&gt; Use Genres as path &gt; select OK &gt; Category &gt; Make Genres a stacked widget? Yes &gt; Landscape</span>
+</div>
+<h3>TV Shows Configuration</h3>
+<div class="step">
+<span class="command">7. Main menu items &gt; TV Shows&gt; select Set main menu path &gt; Fen Light &gt;&gt; TV Shows &gt;&gt; Use TV Shows as path &gt; select Enter &gt; select OK for TV Shows</span>
+</div>
+<div class="step">
+<span class="command">8. Main menu items &gt; TV Shows&gt; select Set widgets &gt; Widget 1: &gt; Fen Light &gt;&gt; TV Shows &gt;&gt; Trending &gt;&gt; Use Trending as path &gt; select OK &gt; Choose widget display type &gt; Poster</span>
+</div>
+<div class="step">
+<span class="command">9. Widget 2: &gt; Fen Light &gt;&gt; TV Shows &gt;&gt; Networks &gt;&gt; Use Networks as path &gt; select OK &gt; Category &gt; Make Networks a stacked widget? Yes &gt; Landscape</span>
+</div>
+<div class="note">
+<span class="important">TIP:</span> You can play around and add more widgets to any of the categories you find in Fen Light!
+    </div>
+<h3>N/A Menu Items for this Tutorial</h3>
+<div class="two-column-disable-list">
+<div class="disable-column">
+<div class="config-item"><span class="command">Disable:</span> Custom 1</div>
+<div class="config-item"><span class="command">Disable:</span> Custom 2</div>
+<div class="config-item"><span class="command">Disable:</span> Custom 3</div>
+<div class="config-item"><span class="command">Disable:</span> Music</div>
+<div class="config-item"><span class="command">Disable:</span> Music videos</div>
+</div>
+<div class="disable-column">
+<div class="config-item"><span class="command">Disable:</span> TV</div>
+<div class="config-item"><span class="command">Disable:</span> Radio</div>
+<div class="config-item"><span class="command">Disable:</span> Pictures</div>
+<div class="config-item"><span class="command">Disable:</span> Videos</div>
+<div class="config-item"><span class="command">Disable:</span> Weather</div>
+</div>
+</div>
+<!-- ====================== -->
+<!-- STEP H: FINAL SKIN SETTINGS -->
+<!-- ====================== -->
+<div class="section" id="step-h">
+<span class="section-anchor" id="step-h-anchor"></span>
+<h2><span class="emoji">✨</span> H: Fentastic Final Skin Settings</h2>
+<div class="note">
+<span class="important">TIP:</span> These settings will Enhance and Complete Kodi for a Clean Streamlined Streaming Service
+    </div>
+<h3>General Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">General &gt; Enable:</span> Use slide animations</div>
+<div class="config-item"><span class="command">General &gt; Enable:</span> Enable auto scrolling for plot &amp; review</div>
+<div class="config-item"><span class="command">General &gt; Enable:</span> Show media flags</div>
+</div>
+<h3>Options Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Options &gt; Enable:</span> Enable alternate info panel</div>
+<div class="config-item"><span class="command">Options &gt; Enable:</span> Show countdown timer for stacked widget load delay</div>
+<div class="config-item"><span class="command">Options &gt; Enable:</span> Enable focus animations</div>
+<div class="config-item"><span class="command">Options &gt; Enable:</span> Enable icon silhouettes for category widgets</div>
+<div class="config-item"><span class="command">Options &gt; Enable:</span> Disable color studio logos</div>
+</div>
+<h3>Ratings/Trailers</h3>
+<div class="step">
+<span class="command">1. Ratings/Trailers &gt; Enter MDbList API Key</span> (You would've gotten it from mdblist.com)
+    </div>
+<div class="step">
+<span class="command">2. Select OK</span>
+</div>
+<div class="step">
+<span class="command">3. Ratings/Trailers &gt; ENABLE ALL OPTIONS!</span>
+</div>
+<h3>Search Settings</h3>
+<div class="step">
+<span class="command">1. Search &gt; Set Search Provider = FEN Light</span>💡
+    </div>
+<div class="step">
+<span class="command">2. Search &gt; ENABLE ALL OPTIONS!</span>
+</div>
+<h3>Artwork Settings</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">Artwork &gt;</span> Show media fanart as background = <span class="toggle-on">On</span></div>
+<div class="config-item"><span class="command">Artwork &gt;</span> background brightness = <span class="toggle-on">Low</span></div>
+<div class="config-item"><span class="command">Artwork &gt;</span> fanart brightness = <span class="toggle-on">Highest</span></div>
+</div>
+<h3>On Screen Display</h3>
+<div class="config-group">
+<div class="config-item"><span class="command">On screen display &gt;</span> Automatically close video OSD = <span class="toggle-on">On</span></div>
+<div class="config-item"><span class="command">On screen display &gt;</span> Video OSD autoclose time (seconds) = <span class="toggle-on">4 Default</span> or your choice</div>
+</div>
+<div class="success">
+<span class="emoji">✅</span> Fentastic Skin &amp; Fen Light for Kodi are complete! You may start watching movies &amp; TV immediately <i>OR</i> continue below for the Complete Sports packages, Movie Trailers &amp; Subtitles.
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP I: SPORTS & LIVE TV -->
+<!-- ====================== -->
+<div class="section" id="step-i">
+<span class="section-anchor" id="step-i-anchor"></span>
+<h2><span class="emoji">🏈</span> I: Live Sports Package &amp; TV</h2>
+<div class="note">
+<span class="important">TIP:</span> For the Live TV & Sports Add-ons to work, these Dependencies are <b>NON-NEGOTIABLE:</b> InputStream Helper .0.6.0+ and Jet Extractors 3.1.5
+    </div>
+<h3>The Crew &amp; DaddyLive Installation</h3>
+<div class="step">
+<span class="command">1. Go to the ⚙ Settings menu</span>
+</div>
+<div class="step">
+<span class="command">2. Select 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">3. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">4. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">5. Type</span> <span class="url">https://team-crew.github.io</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">6. Select OK</span> ✔
+    </div>
+<div class="step">
+<span class="command">7. Type "The Crew"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">8. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">9. GO BACK TO THE SETTINGS MENU</span> and select Add-ons (You may have to hit the back button multiple times)
+    </div>
+<div class="step">
+<span class="command">10. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">11. Select The Crew</span>
+</div>
+<div class="step">
+<span class="command">12. Select repository.thecrew.x.x.zip</span>
+</div>
+<div class="step">
+<span class="command">13. Install from repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select The Crew Repo</span>
+</div>
+<div class="step">
+<span class="command">15. Select Video Add-ons</span>
+</div>
+<div class="step">
+<span class="command">16. Select "The Crew"</span>
+</div>
+<div class="step">
+<span class="command">17. Select Install &amp; OK</span>
+</div>
+<div class="step">
+<span class="command">18.  SCROLL DOWN ⬇ &amp; SELECT "DaddyLive"</span> from that same list.
+    </div>
+<div class="step">
+<span class="command">19. Select Install &amp; OK</span>
+</div>
+<div class="step">
+<span class="command">20. Select DaddyLive &gt; Configure &gt; the 18+ Adult Channels &gt; Password "lol"</span>
+</div>
+<div class="step">
+<span class="command">21. Enter the code &amp; Select OK</span> ✔
+    </div>
+<div class="step">
+<span class="command">22. Go back to the Add-ons list &amp; Select The Crew</span>
+</div>
+<div class="step">
+<span class="command">23. Select Configure &gt; Navigation tab &gt; 18+ Adult Playground &gt; Password "lol"</span>
+</div>
+<div class="step">
+<span class="command">24. Select OK</span> ✔
+    </div>
+<div class="step">
+<span class="command">25. Back out of The Crew completely</span>
+</div>
+<div class="note">
+<span class="important">NOTE:</span> Upon Kodi Restart, new categories will have been added to DaddyLive Live TV &amp; The Crew. 
+    </div>
+<div class="success">
+<span class="emoji">✅</span> The Crew &amp; DaddyLive Sports is now installed.
+    </div>
+<h3>The Loop Installation</h3>
+<div class="step">
+<span class="command">1. Go back to 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">2. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">3. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">4. Type</span> <span class="url">https://loopaddon.uk/theloop</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">5. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">6. Type "The Loop"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">7. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">8. Go back to the Settings menu</span> and select Add-ons.
+    </div>
+<div class="step">
+<span class="command">9. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">10. Select The Loop</span>
+</div>
+<div class="step">
+<span class="command">11. Select repository.loop.x.x.zip</span>
+</div>
+<div class="step">
+<span class="command">12. Install from repository</span>
+</div>
+<div class="step">
+<span class="command">13. Select Loop Repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select VIDEO add-ons</span>
+</div>
+<div class="step">
+<span class="command">15. Select ✈ Jet Proxy Install &amp; OK</span> to Additional Add-ons.
+    </div>
+<div class="step">
+<span class="command">16. Select The Loop Install and OK</span> to Additional Add-ons.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> The Loop is now installed.
+    </div>
+<h3>Mad Titan Sports Installation 🏉</h3>
+<div class="step">
+<span class="command">1. Go back to 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">2. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">3. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">4. Type</span> <span class="url">https://magnetic.website/repo</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">5. Select OK</span> ✔
+    </div>
+<div class="step">
+<span class="command">6. Type "Mad Titan"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">7. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">8. Go back to the Settings menu</span> and select Add-ons.
+    </div>
+<div class="step">
+<span class="command">9. Install from zip file</span>
+</div>
+<div class="step">
+<span class="command">10. Select Mad Titan</span>
+</div>
+<div class="step">
+<span class="command">11. Select repository.Magnetic.x.x.zip</span>
+</div>
+<div class="step">
+<span class="command">12. Install from repository</span>
+</div>
+<div class="step">
+<span class="command">13. Select Magnetic</span>🧲<span class="command">Repo</span>
+</div>
+<div class="step">
+<span class="command">14. Select VIDEO add-ons</span>
+</div>
+<div class="step">
+<span class="command">15. Select Mad Titan Sports</span>
+</div>
+<div class="step">
+<span class="command">16. Select Install and OK</span> to Additional Add-ons.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> Mad Titan Sports is now installed!
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP J: YOUTUBE TRAILERS -->
+<!-- ====================== -->
+<div class="section" id="step-j">
+<span class="section-anchor" id="step-j-anchor"></span>
+<h2><span class="emoji">🎞</span> J: YouTube for Trailers &amp; YouTube</h2>
+<div class="note">
+<span class="important">NOTE:</span> YouTube will need to be configured the 1st time playing a Trailer. Please see <i>"NOTE:"</i> at the bottom of this section.
+    </div>
+<div class="step">
+<span class="command">1. Go back to the ⚙ Settings menu</span>
+</div>
+<div class="step">
+<span class="command">2. Select 📂 File Manager</span>
+</div>
+<div class="step">
+<span class="command">3. Select Add source</span>
+</div>
+<div class="step">
+<span class="command">4. Press Enter on &lt;None&gt;</span>
+</div>
+<div class="step">
+<span class="command">5. Type</span> <span class="url">https://slyguy.uk</span> in the text field.
+    </div>
+<div class="step">
+<span class="command">6. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">7. Type "Slyguy Repo"</span> in the bottom media source name text field.
+    </div>
+<div class="step">
+<span class="command">8. Press OK</span> to add the source.
+    </div>
+<div class="step">
+<span class="command">9. Go back to the Settings menu</span> and select Add-ons. (You may have to hit the back button multiple times)
+    </div>
+<div class="step">
+<span class="command">10. Install from zip 🤐 file</span>
+</div>
+<div class="step">
+<span class="command">11. Select Slyguy Repo</span>
+</div>
+<div class="step">
+<span class="command">12. Select repository.slyguy.zip</span>
+</div>
+<div class="step">
+<span class="command">13. Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">14. Select SlyGuy Repository</span>
+</div>
+<div class="step">
+<span class="command">15. Select PROGRAM Add-ons</span>
+</div>
+<div class="step">
+<span class="command">16. Select SlyGuy Common</span>
+</div>
+<div class="step">
+<span class="command">17. Select Install</span>
+</div>
+<div class="step">
+<span class="command">18. Select SlyGuy Trailers</span> 📽
+    </div>
+<div class="step">
+<span class="command">19. Select Install</span>
+</div>
+<div class="step">
+<span class="command">20. Go back to Add-on Repository (for SlyGuy)</span>
+</div>
+<div class="step">
+<span class="command">21. Select Slyguy Trailers Redirects Repository</span>
+</div>
+<div class="step">
+<span class="command">22. Select Install</span>
+</div>
+<div class="step">
+<span class="command">📺 YOUTUBE INSTALL 📺</span>
+</div>
+<div class="step">
+<span class="command">1. ⚙ Settings &gt; Add-ons &gt; Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">2. Select Kodi Add-on Repository</span>
+</div>
+<div class="step">
+<span class="command">3. Select Video Add-ons</span>
+</div>
+<div class="step">
+<span class="command">4. Select &amp; Install YouTube</span>
+</div>
+<div class="step">
+<span class="command">5. Select OK</span>✔
+    </div>
+<div class="step">
+<span class="command">6. YouTube will need to be Updated to the latest version, 7.2.0+beta.5a. After download select YouTube &gt; Update &gt; OK</span>✔
+    </div>
+<div class="note">
+<span class="important">NOTE:</span> YouTube will need to be configured the 1st time playing a Trailer. Follow the Setup Wizard when it pops up. "Configure Settings? Yes. Configure Settings to Recommended Values? Yes. Configure Performance Settings? Yes. Configure Language and Region? Yes. Configure Subtitles? No. Configure My Location? No. Configure listings to show minimal details? No. Refresh settings.xml? No." A Pop-up with YT instructions will appear, just click OK &amp; it will ask again to configure settings while you're in the process, so just say NO and continue configuration.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> YouTube for Trailers &amp; YouTube is now installed.
+    </div>
+</div>
+<!-- ====================== -->
+<!-- STEP K: SUBTITLES -->
+<!-- ====================== -->
+<div class="section" id="step-k">
+<span class="section-anchor" id="step-k-anchor"></span>
+<h2><span class="emoji">🗣️</span> K: Subtitles Configuration</h2>
+<div class="step">
+<span class="command">1. Settings &gt; Add-ons &gt; Install from Repository</span>
+</div>
+<div class="step">
+<span class="command">2. Select Kodi Add-on Repository</span>
+</div>
+<div class="step">
+<span class="command">3. Select Subtitles</span>
+</div>
+<div class="step">
+<span class="command">4. Select &amp; Install OpenSubtitles.com</span>
+</div>
+<div class="step">
+<span class="command">5. Select OpenSubtitles.com &gt; Configure &gt; enter your Username &amp; Passcode &gt; OK</span>
+</div>
+<div class="step">
+<span class="command">6. In the same Kodi Add-on repository Select &amp; Install Addic7ed.com</span>, if you didn't make an OpenSubtitles.com account.
+    </div>
+<div class="success">
+<span class="emoji">✅</span> Subtitles are now configured.
+    </div>
+</div>
+<!-- ====================== -->
+<!-- FINAL CONGRATULATIONS -->
+<!-- ====================== -->
+<div class="finale">
+<h2>🎉 YOU DID IT! YOU DID IT! 🎉</h2>
+<p style="font-size: 1.5em; margin-top: 20px;">YOUR HOME THEATER IS COMPLETE!</p>
+<p style="font-size: 1.8em; margin-top: 20px;">ENJOY WITH FAMILY &amp; FRIENDS!</p>
+<p style="font-size: 2.5em; margin-top: 20px;">🍿 🎬 💖</p>
+<p style="font-size: 1.8em; margin-top: 20px;"> TRJ</p>
+</div>
+<script>
+    window.onscroll = function() {
+        const backToTop = document.querySelector('.back-to-top');
+        backToTop.style.display = (window.scrollY > 50) ? "block" : "none";
+    };
+</script>
+</div></div></body>
+</html>
