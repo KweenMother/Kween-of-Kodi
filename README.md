@@ -49,8 +49,8 @@ I proved them wrong.
 
 ## 📜 The Manifesto
 
-> *"The Internet I'm Getting Now...  
-> Is the Internet I Was Always Owed."*  
+> *The Internet I'm Getting Now...  
+> Is the Internet I Was Always Owed.*  
 > - *Kween, 2025*
 
 ---
