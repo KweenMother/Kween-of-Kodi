@@ -6,8 +6,8 @@
 ---
 
 ## 🔍 The Backstory
-After enduring:
-- ❌ Constant Kodi, Real-Debrid, The Loop, Mad Titan & Daddylive stream failures (`ConnectionResetError 10054`)  
+After over a year of enduring:
+- ❌ Constant Kodi, Real-Debrid, The Loop, Mad Titan, & Daddylive stream failures (`ConnectionResetError 10054`)  
 - ❌ 501 errors from Real-Debrid's CDN  
 - ❌ Optimum repeatedly claiming, *“It’s your device, not us”*
 
@@ -84,7 +84,7 @@ I proved them wrong.
 ---
 
 ## ☎️ ISP Escalation
-- Contacted Optimum 3 times.
+- Contacted Optimum multiple times
 - Explained all diagnostic steps (hotspot, VPN, different devices, different networks).
 - Asked for credit due to degraded service.
 - Mentioned switching to mobile provider → within 1 minute, service was unblocked.
@@ -155,7 +155,7 @@ I proved them wrong.
 
 > This wasn’t a fix.  
 > It was a **revolution in home networking**.  
-> And now I own every byte I pay for.
+> And now I own every bite I pay for.
 >
 > Checkout: [Kween's Ultimate Kodi Installation Guide](https://kweenmother.github.io/Kween-of-Kodi/)
 
